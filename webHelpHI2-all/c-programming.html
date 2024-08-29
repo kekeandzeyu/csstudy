@@ -1,0 +1,544 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#E8488B"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="built-on" content="2024-08-29T16:50:17.4184328"><title>C++ Programming | Computer Science Study Notes</title><script type="application/json" id="virtual-toc-data">[{"id":"c-fundamentals","level":0,"title":"Ⅰ C++ Fundamentals","anchor":"#c-fundamentals"},{"id":"intro","level":1,"title":"1 C \u0026 C++ Introduction","anchor":"#intro"},{"id":"2-streams","level":1,"title":"2 Streams","anchor":"#2-streams"},{"id":"2-1-strings","level":2,"title":"2.1 Strings","anchor":"#2-1-strings"},{"id":"2-2-stringstreams","level":2,"title":"2.2 Stringstreams","anchor":"#2-2-stringstreams"},{"id":"2-3-cin-and-cout","level":2,"title":"2.3 cin and cout","anchor":"#2-3-cin-and-cout"},{"id":"3-modern-c-types","level":1,"title":"3 Modern C++ Types","anchor":"#3-modern-c-types"},{"id":"3-1-auto","level":2,"title":"3.1 Auto","anchor":"#3-1-auto"},{"id":"3-2-pair-tuple","level":2,"title":"3.2 Pair/Tuple","anchor":"#3-2-pair-tuple"},{"id":"3-3-conversions","level":2,"title":"3.3 Conversions","anchor":"#3-3-conversions"},{"id":"3-4-initializer-list","level":2,"title":"3.4 initializer_list","anchor":"#3-4-initializer-list"},{"id":"standard-template-library-stl","level":0,"title":"Ⅱ Standard Template Library (STL)","anchor":"#standard-template-library-stl"},{"id":"4-containers","level":1,"title":"4 Containers","anchor":"#4-containers"},{"id":"4-1-sequence-containers","level":2,"title":"4.1 Sequence Containers","anchor":"#4-1-sequence-containers"},{"id":"4-2-container-adapters","level":2,"title":"4.2 Container Adapters","anchor":"#4-2-container-adapters"},{"id":"4-3-associative-containers","level":2,"title":"4.3 Associative Containers","anchor":"#4-3-associative-containers"},{"id":"4-4-iterators","level":2,"title":"4.4 Iterators","anchor":"#4-4-iterators"},{"id":"5-templates","level":1,"title":"5 Templates","anchor":"#5-templates"},{"id":"5-1-template-functions","level":2,"title":"5.1 Template Functions","anchor":"#5-1-template-functions"},{"id":"6-functions-and-algorithms","level":1,"title":"6 Functions and Algorithms","anchor":"#6-functions-and-algorithms"},{"id":"Lambda","level":2,"title":"6.1 Lambda Functions","anchor":"#Lambda"},{"id":"6-2-algorithms","level":2,"title":"6.2 Algorithms","anchor":"#6-2-algorithms"},{"id":"object-oriented-programming","level":0,"title":"Ⅲ Object-Oriented Programming","anchor":"#object-oriented-programming"},{"id":"7-classes-and-consts","level":1,"title":"7 Classes and Consts","anchor":"#7-classes-and-consts"},{"id":"7-1-classes","level":2,"title":"7.1 Classes","anchor":"#7-1-classes"},{"id":"7-2-consts","level":2,"title":"7.2 Consts","anchor":"#7-2-consts"},{"id":"8-operators","level":1,"title":"8 Operators","anchor":"#8-operators"},{"id":"9-inheritance","level":1,"title":"9 Inheritance","anchor":"#9-inheritance"},{"id":"9-1-overriding-and-overloading","level":2,"title":"9.1 Overriding and Overloading","anchor":"#9-1-overriding-and-overloading"},{"id":"9-2-types-of-inheritance-java","level":2,"title":"9.2 Types of Inheritance (Java)","anchor":"#9-2-types-of-inheritance-java"},{"id":"3-3","level":2,"title":"3.3","anchor":"#3-3"},{"id":"modern-c","level":0,"title":"Ⅳ Modern C++","anchor":"#modern-c"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b408/app.css" rel="stylesheet"><link rel="icon" type="image/png" sizes="16x16" href="Computer-Science-Study-Notes/photo.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="C++ Programming | Computer Science Study Notes"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Computer Science Study Notes Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/c-programming.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="C++ Programming | Computer Science Study Notes"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/c-programming.html#webpage",
+    "url": "writerside-documentation/c-programming.html",
+    "name": "C++ Programming | Computer Science Study Notes",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Computer Science Study Notes Help"
+}</script><!-- End Schema.org --></head><body data-id="C-Programming" data-main-title="C++ Programming" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs=""><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Computer Science Study Notes  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="C-Programming" id="C-Programming.md">C++ Programming</h1><section class="chapter"><h2 id="c-fundamentals" data-toc="c-fundamentals">Ⅰ C++ Fundamentals</h2><section class="chapter"><h3 id="intro" data-toc="intro">1 C &amp; C++ Introduction</h3><p id="-y7phsz_12"><span id="-y7phsz_18"><font style="color:#8a2be2">Properties:</font></span></p><ul class="list _bullet" id="-y7phsz_13"><li class="list__item" id="-y7phsz_19"><p id="-y7phsz_21">C/C++ is a <span id="-y7phsz_22"><font style="color:#ff4500">compiled</font></span> language.</p></li><li class="list__item" id="-y7phsz_20"><p id="-y7phsz_23">C/C++ <span id="-y7phsz_25"><i>compilers</i></span> map C/C++ programs into architecture-specific machine code (string of 0s and 1s).</p><ul class="list _bullet" id="-y7phsz_24"><li class="list__item" id="-y7phsz_26"><p id="-y7phsz_29">Unlike Java, which converts to architecture-independent bytecode ( run by JVM =&gt; Java Virtual Machine).</p></li><li class="list__item" id="-y7phsz_27"><p id="-y7phsz_30">Unlike Python, which directly <span id="-y7phsz_31"><i>interprets</i></span> the code.</p></li><li class="list__item" id="-y7phsz_28"><p id="-y7phsz_32">Main difference is when your program is mapped to low-level machine instructions, CPU will directly interprets and runs.</p></li></ul></li></ul><p id="-y7phsz_14"><span id="-y7phsz_33"><font style="color:#8a2be2">Compilation Advantages:</font></span></p><ul class="list _bullet" id="-y7phsz_15"><li class="list__item" id="-y7phsz_34"><p id="-y7phsz_36"><span id="-y7phsz_38"><font style="color:#ff00ff">Excellent run-time performance:</font></span></p><p id="-y7phsz_37">Generally much faster than Python or Java for comparable code because it <span id="-y7phsz_39"><font style="color:#ff4500">optimizes for the given architecture</font></span>.</p></li><li class="list__item" id="-y7phsz_35"><p id="-y7phsz_40"><span id="-y7phsz_42"><font style="color:#ff00ff">Fair compilation time:</font></span></p><p id="-y7phsz_41">Enhancements in compilation procedure (Makefiles) allow us to <span id="-y7phsz_43"><font style="color:#ff4500">recompile only the modified files</font></span>.</p></li></ul><p id="-y7phsz_16"><span id="-y7phsz_44"><font style="color:#8a2be2">Compilation Advantages:</font></span></p><ul class="list _bullet" id="-y7phsz_17"><li class="list__item" id="-y7phsz_45"><p id="-y7phsz_47">Compiled files, including the executable, are arcitecture-specific. (CPU type and OS)</p><ul class="list _bullet" id="-y7phsz_48"><li class="list__item" id="-y7phsz_49"><p id="-y7phsz_51">Executable must be <span id="-y7phsz_52"><font style="color:#ff4500">rebuilt</font></span> on each new system.</p></li><li class="list__item" id="-y7phsz_50"><p id="-y7phsz_53">i.e. &quot;porting your code&quot; to a new architecture.</p></li></ul></li><li class="list__item" id="-y7phsz_46"><p id="-y7phsz_54">Instead of &quot;Edit -&gt; Run [repeat]&quot; cycle, &quot;Edit -&gt; Compile -&gt; Run [repeat]&quot; iteration cycle can be slow.</p></li></ul></section><section class="chapter"><h3 id="2-streams" data-toc="2-streams">2 Streams</h3><section class="chapter"><h4 id="2-1-strings" data-toc="2-1-strings">2.1 Strings</h4><div class="code-block" data-lang="cpp">
+std::string str = &quot;Hello, World!&quot;;
+std::cout &lt;&lt; str[1] &lt;&lt; std::endl; // e
+str[1] = 'a'; // Hallo, World!
+
+std::cout &lt;&lt; &quot;[&quot; &lt;&lt; std::setw(3) &lt;&lt; &quot;It&quot; &lt;&lt; &quot;]&quot; &lt;&lt;std::endl; // [ It]
+std::cout &lt;&lt; &quot;[&quot; &lt;&lt; std::left &lt;&lt; std::setw(3) &lt;&lt; &quot;It&quot; &lt;&lt; &quot;]&quot; &lt;&lt;std::endl; // [It ]
+std::cout &lt;&lt; &quot;[&quot; &lt;&lt; std::left &lt;&lt; std::setfill('-') &lt;&lt; std::setw(3) &lt;&lt; &quot;It&quot; &lt;&lt; &quot;]&quot; &lt;&lt;std::endl; // [It-]
+</div></section><section class="chapter"><h4 id="2-2-stringstreams" data-toc="2-2-stringstreams">2.2 Stringstreams</h4><ul class="list _bullet" id="-y7phsz_59"><li class="list__item" id="-y7phsz_63"><p id="-y7phsz_65">Constructors with initialtext in the buffer.</p></li><li class="list__item" id="-y7phsz_64"><p id="-y7phsz_66">Can optionally provide &quot;modes&quot; such as ate (start at end) or bin (read as binary).</p></li></ul><section class="chapter"><h5 id="2-2-1-output-stringstreams" data-toc="2-2-1-output-stringstreams">2.2.1 Output Stringstreams</h5><div class="code-block" data-lang="cpp">
+std::ostringstream oss(&quot;Ito-En Green Tea&quot;);
+std::cout &lt;&lt; oss.str() &lt;&lt; std::endl; // Ito-En Green Tea
+oss &lt;&lt; &quot;16.9 Ounces&quot;;
+std::cout &lt;&lt; oss.str() &lt;&lt; std::endl; // 16.9 Ouncesn Tea 
+
+std::ostringstream oss(&quot;Ito-En Green Tea&quot;, std::ostringstream::ate);
+oss &lt;&lt; &quot;16.9 Ounces&quot;;
+std::cout &lt;&lt; oss.str() &lt;&lt; std::endl; // Ito-En Green Tea16.9 Ounces
+</div></section><section class="chapter"><h5 id="2-2-2-input-stringstreams" data-toc="2-2-2-input-stringstreams">2.2.2 Input Stringstreams</h5><aside class="prompt" data-type="warning" data-title="" id="-y7phsz_68"><p id="-y7phsz_70">Types matter! Stream stops reading at any whitespace or any invalid character for the type.</p></aside><div class="code-block" data-lang="cpp">
+std::istringstream iss(&quot;16.9 Ounces&quot;);
+double amount;
+std::string unit;
+iss &gt;&gt; amount &gt;&gt; unit; // amount = 16.9, unit = Ounces
+
+std::istringstream iss(&quot;16.9 Ounces&quot;);
+int amount;
+std::string unit;
+iss &gt;&gt; amount &gt;&gt; unit; // amount = 16, unit = &quot;.9&quot;
+</div></section><section class="chapter"><h5 id="2-2-3-state-bits" data-toc="2-2-3-state-bits">2.2.3 State Bits</h5><ul class="list _bullet" id="-y7phsz_71"><li class="list__item" id="-y7phsz_74"><p id="-y7phsz_78"><span id="-y7phsz_79"><font style="color:#ff00ff">Good bit</font></span> - ready for read /write. (Nothing unusal, on when other bits are off)</p></li><li class="list__item" id="-y7phsz_75"><p id="-y7phsz_80"><span id="-y7phsz_81"><font style="color:#ff00ff">Fail bit</font></span> - previous operation failed, all future operations frozen. (Type mismatch, file can't be opened, seekg failed)</p></li><li class="list__item" id="-y7phsz_76"><p id="-y7phsz_82"><span id="-y7phsz_83"><font style="color:#ff00ff">EOF bit</font></span> - previous operation reached the end of buffer content (reached the end of buffer).</p></li><li class="list__item" id="-y7phsz_77"><p id="-y7phsz_84"><span id="-y7phsz_85"><font style="color:#ff00ff">Bad bit</font></span> - external error, like irrecoverable.(e.g. the file you are reading from suddenly is deleted)</p></li></ul><aside class="prompt" data-type="note" data-title="" id="-y7phsz_72"><p id="-y7phsz_86">Good and bad are not opposites! (e.g. type mismatch)</p><p id="-y7phsz_87">Good and fail are not opposites! (e.g. end of file)</p><p id="-y7phsz_88">Fail and EOF are normally the ones you will be checking.</p></aside><div class="code-block" data-lang="cpp">
+std::istringstream iss(&quot;17&quot;);
+int amount;
+iss &gt;&gt; amount;
+std::cout &lt;&lt; (iss.eof() ? &quot;EOF&quot; : &quot;Not EOF&quot;) &lt;&lt; std::endl;
+// There also exist iss.good(), iss.fail() &amp; iss.bad()
+</div></section></section><section class="chapter"><h4 id="2-3-cin-and-cout" data-toc="2-3-cin-and-cout">2.3 cin and cout</h4><ul class="list _bullet" id="-y7phsz_89"><li class="list__item" id="-y7phsz_90"><p id="-y7phsz_93">The program hangs and waits for user input when the position reaches EOF, past the last token in the buffer.</p></li><li class="list__item" id="-y7phsz_91"><p id="-y7phsz_94">The position pointer skips whitespace <span id="-y7phsz_95">after</span> the token with each &gt;&gt; operation.</p></li><li class="list__item" id="-y7phsz_92"><p id="-y7phsz_96">The position pointer does the following:</p><ul class="list _bullet" id="-y7phsz_97"><li class="list__item" id="-y7phsz_98"><p id="-y7phsz_100">consume all whitespaces (spaces, newlines, etc.)</p></li><li class="list__item" id="-y7phsz_99"><p id="-y7phsz_101">reads as many characters until:</p><ul class="list _bullet" id="-y7phsz_102"><li class="list__item" id="-y7phsz_103"><p>a whitespace is reached, or&hellip;</p></li><li class="list__item" id="-y7phsz_104"><p>for primitives, the maximum number of bytes necessary to form a valid variable.</p></li><li class="list__item" id="-y7phsz_105"><p>example: if we extract an int from &ldquo;86.2&rdquo;, we&rsquo;ll get 86, with pos at the decimal point.</p></li></ul></li></ul></li></ul></section></section><section class="chapter"><h3 id="3-modern-c-types" data-toc="3-modern-c-types">3 Modern C++ Types</h3><section class="chapter"><h4 id="3-1-auto" data-toc="3-1-auto">3.1 Auto</h4><ul class="list _bullet" id="-y7phsz_110"><li class="list__item" id="-y7phsz_112"><p id="-y7phsz_114">When a type name is too long and a simpler alias makes the code more readable, use it.</p></li><li class="list__item" id="-y7phsz_113"><p id="-y7phsz_115">In libraries there is a common name for a type within each class. Example:</p><ul class="list _bullet" id="-y7phsz_116"><li class="list__item" id="-y7phsz_117"><p id="-y7phsz_119">vector::iterator, map::iterator, string::iterator</p></li><li class="list__item" id="-y7phsz_118"><p id="-y7phsz_120">vector::reference, map::reference, string::reference</p></li></ul></li></ul><aside class="prompt" data-type="warning" data-title="" id="-y7phsz_111"><p id="-y7phsz_121">Auto discards const and references!</p></aside></section><section class="chapter"><h4 id="3-2-pair-tuple" data-toc="3-2-pair-tuple">3.2 Pair/Tuple</h4><p id="-y7phsz_122">A pair is simply two objects bundled together.</p><aside class="prompt" data-type="note" data-title="" id="-y7phsz_123"><p id="-y7phsz_125">Remember to include &lt; utility &gt; and &lt; tuple &gt;</p></aside><div class="code-block" data-lang="cpp">
+    std::pair&lt;double, int&gt; price(3.4, 5);
+
+    // make_pair/tuple (C++ 11) automatically deduces the type!
+    auto prices = std::make_pair(3.4, 5);
+    auto values = std::make_tuple(3, 4, &quot;hi&quot;);
+
+    // access via get/set
+    prices.first = prices.second;           // prices = {5, 5}
+    get&lt;0&gt;(values) = get&lt;1&gt;(values);  // values = {4, 4, &quot;hi&quot;}
+
+    // structured binding (C++ 17) - extract each binding
+    auto [a, b] = prices;       // a = 5, b = 5
+    const auto&amp; [c, d, e] = values; // c = 4, d = 4, e = &quot;hi&quot;
+</div></section><section class="chapter"><h4 id="3-3-conversions" data-toc="3-3-conversions">3.3 Conversions</h4><div class="code-block" data-lang="cpp">
+int v1 = static_cast&lt;double&gt;(3.14);
+double v2 = 6;
+</div><div class="code-block" data-lang="cpp">
+const int v3 = 3;
+int* v4 = const_cast&lt;int*&gt; (&amp;v3);
+</div></section><section class="chapter"><h4 id="3-4-initializer-list" data-toc="3-4-initializer-list">3.4 initializer_list</h4><p id="-y7phsz_128"><span id="-y7phsz_132"><font style="color:#8a2be2">Definition</font></span>: An initializer list is a lightweight vector that can be used as a parameter.</p><div class="code-block" data-lang="cpp">
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;initializer_list&gt;
+
+class MyContainer {
+private:
+    std::vector&lt;int&gt; data; 
+
+public:
+    // Constructor using initializer_list
+    MyContainer(std::initializer_list&lt;int&gt; values) {
+        // Iterate through the initializer_list and populate the vector
+        for (int value : values) {
+            data.push_back(value);
+        }
+    }
+
+    void print() const {
+        for (int value : data) {
+            std::cout &lt;&lt; value &lt;&lt; &quot; &quot;;
+        }
+        std::cout &lt;&lt; std::endl;
+    }
+};
+
+int main() {
+    // Using initializer_list to initialize MyContainer
+    MyContainer container1 = {1, 2, 3, 4, 5}; 
+    container1.print();  
+
+    MyContainer container2{6, 7, 8};
+    container2.print(); 
+
+    return 0;
+}
+</div><aside class="prompt" data-type="warning" data-title="" id="-y7phsz_130"><p id="-y7phsz_133">C++ 11 provides a uniform initialization syntax. Using the uniform initialization syntax, the initializer list constructor is preferred over constructor.</p></aside><div class="code-block" data-lang="cpp">
+std::vector&lt;int&gt; v1(3, 10) // v1 = {10, 10, 10}
+std::vector&lt;int&gt; v2{3, 10} // v2 = {3, 10}
+</div></section></section></section><section class="chapter"><h2 id="standard-template-library-stl" data-toc="standard-template-library-stl">Ⅱ Standard Template Library (STL)</h2><section class="chapter"><h3 id="4-containers" data-toc="4-containers">4 Containers</h3><section class="chapter"><h4 id="4-1-sequence-containers" data-toc="4-1-sequence-containers">4.1 Sequence Containers</h4><p id="-y7phsz_142"><span id="-y7phsz_146"><font style="color:#ff8c00">Sequence Containers:</font></span> Containers which provide access to sequences of elements.</p><ul class="list _bullet" id="-y7phsz_143"><li class="list__item" id="-y7phsz_147"><p id="-y7phsz_152"><code class="code" id="-y7phsz_153">std::vector&lt;T&gt;</code></p></li><li class="list__item" id="-y7phsz_148"><p id="-y7phsz_154"><code class="code" id="-y7phsz_155">std::deque&lt;T&gt;</code></p></li><li class="list__item" id="-y7phsz_149"><p id="-y7phsz_156"><code class="code" id="-y7phsz_157">std::array&lt;T&gt;</code></p></li><li class="list__item" id="-y7phsz_150"><p id="-y7phsz_158"><code class="code" id="-y7phsz_159">std::list&lt;T&gt;</code></p></li><li class="list__item" id="-y7phsz_151"><p id="-y7phsz_160"><code class="code" id="-y7phsz_161">std::forward_list&lt;T&gt;</code></p></li></ul><section class="chapter"><h5 id="4-1-1-vector" data-toc="4-1-1-vector">4.1.1 Vector</h5><p id="-y7phsz_162"><span id="-y7phsz_169"><font style="color:#ff8c00">Vector:</font></span> An array with changeable size.</p><div class="table-wrapper"><table class="left_header wide" id="-y7phsz_163"><thead><tr class="ijRowHead" id="-y7phsz_170"><th id="-y7phsz_173"></th><th id="-y7phsz_174"><p><code class="code" id="-y7phsz_176">vec[index]</code></p></th><th id="-y7phsz_175"><p><code class="code" id="-y7phsz_177">vec.at(index)</code></p></th></tr></thead><tbody><tr id="-y7phsz_171"><th id="-y7phsz_178"><p>Bounds Checking</p></th><td id="-y7phsz_179"><p>No</p></td><td id="-y7phsz_180"><p>Yes</p></td></tr><tr id="-y7phsz_172"><th id="-y7phsz_181"><p>Speed</p></th><td id="-y7phsz_182"><p>Fast</p></td><td id="-y7phsz_183"><p>Slow</p></td></tr></tbody></table></div><aside class="prompt" data-type="warning" data-title="" id="-y7phsz_164"><p id="-y7phsz_184">If you write your program <span id="-y7phsz_185"><font style="color:#adff2f">correctly</font></span>, bounds checking will just <span id="-y7phsz_186"><font style="color:#ff4500">slow</font></span> you down.</p></aside><p id="-y7phsz_165"><span id="-y7phsz_187"><font style="color:#8a2be2">Advantages:</font></span></p><ul class="list _bullet" id="-y7phsz_166"><li class="list__item" id="-y7phsz_188"><p id="-y7phsz_190">Fast, lightweight &amp; intuitive.</p></li><li class="list__item" id="-y7phsz_189"><p id="-y7phsz_191">Grow efficiently <span id="-y7phsz_192"><font style="color:#adff2f">in one direction</font></span>.</p></li></ul><p id="-y7phsz_167"><span id="-y7phsz_193"><font style="color:#8a2be2">Disadvantages:</font></span></p><ul class="list _bullet" id="-y7phsz_168"><li class="list__item" id="-y7phsz_194"><p id="-y7phsz_195">cannot push_front!</p></li></ul></section><section class="chapter"><h5 id="4-1-2-deque" data-toc="4-1-2-deque">4.1.2 Deque</h5><p id="-y7phsz_196"><span id="-y7phsz_204"><font style="color:#ff8c00">Deque:</font></span> A deque is a doubly ended queue.</p><p id="-y7phsz_197"><span id="-y7phsz_205"><font style="color:#8a2be2">Implementation:</font></span></p><p id="-y7phsz_198">Instead of storing all elements in a single contiguous block, deque internally manages a collection of fixed-size arrays called &quot;chunks&quot; or &quot;buffers.&quot;</p><p id="-y7phsz_199">Deque maintains a dynamic array (usually a small array or a tree-like structure) called a &quot;map&quot; or &quot;central index&quot;. This map stores pointers to the beginning of each chunk.</p><p id="-y7phsz_200"><span id="-y7phsz_206"><font style="color:#8a2be2">Advantages:</font></span></p><ul class="list _bullet" id="-y7phsz_201"><li class="list__item" id="-y7phsz_207"><p id="-y7phsz_208">Can push_front!</p></li></ul><p id="-y7phsz_202"><span id="-y7phsz_209"><font style="color:#8a2be2">Disadvantages:</font></span></p><ul class="list _bullet" id="-y7phsz_203"><li class="list__item" id="-y7phsz_210"><p id="-y7phsz_211">For other operations, vector outperform deque.</p></li></ul></section></section><section class="chapter"><h4 id="4-2-container-adapters" data-toc="4-2-container-adapters">4.2 Container Adapters</h4><ol class="list _alpha-lower" id="-y7phsz_212" type="a"><li class="list__item" id="-y7phsz_213"><p id="-y7phsz_215"><span id="-y7phsz_217"><font style="color:#ff00ff">Stacks:</font></span></p><ul class="list _bullet" id="-y7phsz_216"><li class="list__item" id="-y7phsz_218"><p id="-y7phsz_220">The standard containers <code class="code" id="-y7phsz_221">std::vector</code>, <code class="code" id="-y7phsz_222">std::deque</code>, <code class="code" id="-y7phsz_223">std::list</code> satisfy these requirements.</p></li><li class="list__item" id="-y7phsz_219"><p id="-y7phsz_224">Just limit the functionality of a vector/deque to only allow <code class="code" id="-y7phsz_225">push_back</code> and <code class="code" id="-y7phsz_226">pop_back</code>.</p></li></ul></li><li class="list__item" id="-y7phsz_214"><p id="-y7phsz_227"><span id="-y7phsz_229"><font style="color:#ff00ff">Queues:</font></span></p><ul class="list _bullet" id="-y7phsz_228"><li class="list__item" id="-y7phsz_230"><p id="-y7phsz_232">The standard containers <code class="code" id="-y7phsz_233">std::deque</code> and <code class="code" id="-y7phsz_234">std::list</code> satisfy these requirements.</p></li><li class="list__item" id="-y7phsz_231"><p id="-y7phsz_235">Just limit the functionality of a deque to only allow <code class="code" id="-y7phsz_236">push_back</code> and <code class="code" id="-y7phsz_237">pop_front</code>.</p></li></ul></li></ol></section><section class="chapter"><h4 id="4-3-associative-containers" data-toc="4-3-associative-containers">4.3 Associative Containers</h4><p id="-y7phsz_238"><span id="-y7phsz_240"><font style="color:#ff8c00">Associative containers:</font></span> Data is accessed using the <span id="-y7phsz_241"><font style="color:#ff4500">key</font></span> instead of index.</p><style>.theme-dark .plantuml > svg {filter: hue-rotate(180deg) invert(0.9);}div.plantuml {overflow-x: auto;}</style><div class="plantuml"><?xml version="1.0" encoding="us-ascii" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="256px" preserveAspectRatio="none" style="width:774px;height:256px;background:#FFFFFF;" version="1.1" viewBox="0 0 774 256" width="774px" zoomAndPan="magnify"><defs/><g><rect fill="#F1F1F1" height="38.6211" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="125" x="10" y="107.9316"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="20" y="133.0391">Class Templates</text><rect fill="#F1F1F1" height="57.2422" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="313" x="185" y="40"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="223" x="199" y="65.1074">Based on ordering property of keys</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="289" x="199" y="83.7285">Keys need to be comparable using &lt; operator</text><rect fill="#F1F1F1" height="38.6211" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="132" x="548" y="20"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="112" x="558" y="45.1074">std::map&lt;T1, T2&gt;</text><path d="M498,68.6211 L508,68.6211 C523,68.6211 523,39.3105 538,39.3105 L548,39.3105 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><rect fill="#F1F1F1" height="38.6211" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="91" x="548" y="78.6211"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="71" x="558" y="103.7285">std::set&lt;T&gt;</text><path d="M498,68.6211 L508,68.6211 C523,68.6211 523,97.9316 538,97.9316 L548,97.9316 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><path d="M135,127.2422 L145,127.2422 C160,127.2422 160,68.6211 175,68.6211 L185,68.6211 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><rect fill="#F1F1F1" height="57.2422" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="321" x="185" y="157.2422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="199" y="182.3496">Based on hash function</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="297" x="199" y="200.9707">You need to define how the key can be hashed</text><rect fill="#F1F1F1" height="38.6211" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="206" x="556" y="137.2422"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="186" x="566" y="162.3496">std::unordered_map&lt;T1, T2&gt;</text><path d="M506,185.8633 L516,185.8633 C531,185.8633 531,156.5527 546,156.5527 L556,156.5527 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><rect fill="#F1F1F1" height="38.6211" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:1.5;" width="165" x="556" y="195.8633"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="145" x="566" y="220.9707">std::unordered_set&lt;T&gt;</text><path d="M506,185.8633 L516,185.8633 C531,185.8633 531,215.1738 546,215.1738 L556,215.1738 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><path d="M135,127.2422 L145,127.2422 C160,127.2422 160,185.8633 175,185.8633 L185,185.8633 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><!--SRC=[RL1DJm8n4BttLxoZ42Moeeah8GHG8uWQNKaycR8TsCRTTjDECVZhxHeKJRpCOMRUvz2pT5nfeofPYpR6fVGU6LLrAPcyQBTJZAGd1MjWdIAdpHgripKvtiAky4PRBp2B4uRY7rii2RcjQkdaiYG4tq3wQ22IhRk8f6ruLcaQDVjPzn1PCjWlFN4_6_nLBgGli0ecPssDm8iDFsAALjeG2liEBgYnWroQnaC38lLBBfYl1AHU_nNUdtSMXXHhsLKZ7aff-7b-Ymqv7rsWsqcEavDEDpcuSXhtEICvHj9DU-VfQG_ZfmpDlIKEvZSPl0qk9oZjsUbbQ6Aqn5Hk91w3OLrHYlkQp7Go-rxWqcoqiwOYmsAwcEyVpdf78yru8XUjO34N4rh9K794v5R5ibDSZsRYLffraEl8_568iOsiRfjYVFS9]--></g></svg></div></section><section class="chapter"><h4 id="4-4-iterators" data-toc="4-4-iterators">4.4 Iterators</h4><p id="-y7phsz_242"><span id="-y7phsz_252"><font style="color:#8a2be2">Four iterator operations:</font></span></p><ul class="list _bullet" id="-y7phsz_243"><li class="list__item" id="-y7phsz_253"><p id="-y7phsz_257"><span id="-y7phsz_259"><font style="color:#ff00ff">Create iterator:</font></span></p><p id="-y7phsz_258"><code class="code" id="-y7phsz_260">std::set&lt;int&gt;::iterator iter = mySet.begin()</code></p></li><li class="list__item" id="-y7phsz_254"><p id="-y7phsz_261"><span id="-y7phsz_263"><font style="color:#ff00ff">Dereference iterator to read value currently pointed to:</font></span></p><p id="-y7phsz_262"><code class="code" id="-y7phsz_264">int val = *iter</code></p></li><li class="list__item" id="-y7phsz_255"><p id="-y7phsz_265"><span id="-y7phsz_267"><font style="color:#ff00ff">Advance iterator:</font></span></p><p id="-y7phsz_266"><code class="code" id="-y7phsz_268">iter++</code>; or <code class="code" id="-y7phsz_269">++iter</code></p></li><li class="list__item" id="-y7phsz_256"><p id="-y7phsz_270"><span id="-y7phsz_271"><font style="color:#ff00ff">Compare against another iterator</font></span> (especially <code class="code" id="-y7phsz_272">.end()</code> iterator)</p></li></ul><p id="-y7phsz_244"><span id="-y7phsz_273"><font style="color:#8a2be2">Map Iterators:</font></span></p><div class="code-block" data-lang="cpp">
+    map&lt;int, int&gt; m;
+    map&lt;int, int&gt;::iterator i = m.begin();
+    map&lt;int, int&gt;::iterator end = m.end();
+    while (i != end) {
+        cout &lt;&lt; (*i).first &lt;&lt; &quot; &quot; &lt;&lt; (*i).second &lt;&lt; endl;
+        i++;
+    }
+</div><svg aria-roledescription="stateDiagram" role="graphics-document document" viewBox="0 0 538.4479370117188 133.3333282470703" style="max-width: 538.4479370117188px;" class="statediagram" xmlns="http://www.w3.org/2000/svg" width="100%" id="mermaid"><g><defs><marker orient="auto" markerUnits="strokeWidth" markerHeight="14" markerWidth="20" refY="7" refX="19" id="statediagram-barbEnd"><path d="M 19,7 L9,13 L14,7 L9,1 Z"></path></marker></defs><g class="root"><g class="clusters"></g><g class="edgePaths"><path marker-end="url(#statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge4" d="M135.59375,66.66666793823242L139.76041666666666,66.66666793823242C143.92708333333334,66.66666793823242,152.26041666666666,66.66666793823242,160.59375,66.66666793823242C168.92708333333334,66.66666793823242,177.26041666666666,66.66666793823242,181.42708333333334,66.66666793823242L185.59375,66.66666793823242"></path><path marker-end="url(#statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge5" d="M291.91666412353516,66.66666793823242L296.08333079020184,66.66666793823242C300.24999745686847,66.66666793823242,308.58333079020184,66.66666793823242,316.91666412353516,66.66666793823242C325.24999745686847,66.66666793823242,333.58333079020184,66.66666793823242,337.74999745686847,66.66666793823242L341.91666412353516,66.66666793823242"></path><path marker-end="url(#statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge6" d="M403.6238359998282,49.83333396911621L409.78201568711273,45.66666730244955C415.9401953743972,41.500000635782875,428.2565547489662,33.16666730244955,439.63782460806465,29.00000063578288C451.0190944671631,24.83333396911621,461.465274810791,24.83333396911621,466.688364982605,24.83333396911621L471.91145515441895,24.83333396911621"></path><path marker-end="url(#statediagram-barbEnd)" style="fill:none" class="edge-thickness-normal transition" id="edge7" d="M403.6238359998282,83.50000190734863L409.78201568711273,87.6666685740153C415.9401953743972,91.83333524068196,428.2565547489662,100.1666685740153,438.58140110291737,104.33333524068196C448.90624745686847,108.50000190734863,457.23958079020184,108.50000190734863,461.40624745686847,108.50000190734863L465.57291412353516,108.50000190734863"></path></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><rect height="0" width="0" ry="0" rx="0"></rect><foreignObject height="0" width="0"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><rect height="0" width="0" ry="0" rx="0"></rect><foreignObject height="0" width="0"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><rect height="0" width="0" ry="0" rx="0"></rect><foreignObject height="0" width="0"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><rect height="0" width="0" ry="0" rx="0"></rect><foreignObject height="0" width="0"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g transform="translate(71.796875, 66.66666793823242)" id="state-Random_Access-4" class="node  statediagram-state"><rect height="33.66666793823242" width="127.59375" y="-16.83333396911621" x="-63.796875" style="" class="basic label-container"></rect><g transform="translate(-56.296875, -9.333333969116211)" style="" class="label"><rect></rect><foreignObject height="18.666667938232422" width="112.59375"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel">Random_Access</span></div></foreignObject></g></g><g transform="translate(238.75520706176758, 66.66666793823242)" id="state-Bidirectional-5" class="node  statediagram-state"><rect height="33.66666793823242" width="106.32292175292969" y="-16.83333396911621" x="-53.161460876464844" style="" class="basic label-container"></rect><g transform="translate(-45.661460876464844, -9.333333969116211)" style="" class="label"><rect></rect><foreignObject height="18.666667938232422" width="91.32292175292969"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel">Bidirectional</span></div></foreignObject></g></g><g transform="translate(378.74478912353516, 66.66666793823242)" id="state-Forward-7" class="node  statediagram-state"><rect height="33.66666793823242" width="73.65625" y="-16.83333396911621" x="-36.828125" style="" class="basic label-container"></rect><g transform="translate(-29.328125, -9.333333969116211)" style="" class="label"><rect></rect><foreignObject height="18.666667938232422" width="58.65625"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel">Forward</span></div></foreignObject></g></g><g transform="translate(498.01041412353516, 24.83333396911621)" id="state-Input-6" class="node  statediagram-state"><rect height="33.66666793823242" width="52.19791793823242" y="-16.83333396911621" x="-26.09895896911621" style="" class="basic label-container"></rect><g transform="translate(-18.59895896911621, -9.333333969116211)" style="" class="label"><rect></rect><foreignObject height="18.666667938232422" width="37.19791793823242"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel">Input</span></div></foreignObject></g></g><g transform="translate(498.01041412353516, 108.50000190734863)" id="state-Output-7" class="node  statediagram-state"><rect height="33.66666793823242" width="64.875" y="-16.83333396911621" x="-32.4375" style="" class="basic label-container"></rect><g transform="translate(-24.9375, -9.333333969116211)" style="" class="label"><rect></rect><foreignObject height="18.666667938232422" width="49.875"><div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml"><span class="nodeLabel">Output</span></div></foreignObject></g></g></g></g></g></svg><section class="chapter"><h5 id="4-4-1-input-iterators" data-toc="4-4-1-input-iterators">4.4.1 Input Iterators</h5><p id="-y7phsz_274">For sequential, single-pass input.</p><p id="-y7phsz_275">Read only, i.e. can only be dereferenced on <span id="-y7phsz_277"><font style="color:#ff4500">right</font></span> side of expression.</p><div class="code-block" data-lang="cpp">
+vector&lt;int&gt;::iterator iter = myVector.begin();
+int val = *iter;
+</div></section><section class="chapter"><h5 id="4-4-2-output-iterators" data-toc="4-4-2-output-iterators">4.4.2 Output Iterators</h5><p id="-y7phsz_278">For sequential, single-pass output.</p><p id="-y7phsz_279">Read only, i.e. can only be dereferenced on <span id="-y7phsz_281"><font style="color:#ff4500">left</font></span> side of expression.</p><div class="code-block" data-lang="cpp">
+vector&lt;int&gt;::iterator iter = myVector.begin();
+*iter = 5;
+</div></section><section class="chapter"><h5 id="4-4-3-forward-iterators" data-toc="4-4-3-forward-iterators">4.4.3 Forward Iterators</h5><p id="-y7phsz_282">Combines input and output, plus can make multiple passes.</p><p id="-y7phsz_283">Can read from and write to (if not const iterator).</p><div class="code-block" data-lang="cpp">
+// multiple passes
+vector&lt;int&gt;::iterator iter1 = myVector.begin();
+vector&lt;int&gt;::iterator iter2 = myVector.begin();
+iter1++;
+iter2++;
+if (iter1 == iter2) { cout &lt;&lt; &quot;Equal&quot; &lt;&lt; endl; } // Equal
+</div></section><section class="chapter"><h5 id="4-4-4-bidirectional-iterators" data-toc="4-4-4-bidirectional-iterators">4.4.4 Bidirectional Iterators</h5><p id="-y7phsz_285">Same as forward iterators, plus can go backwards with the decrement operator (--).</p><p id="-y7phsz_286"><span id="-y7phsz_287"><font style="color:#8a2be2">Use cases:</font></span> <code class="code" id="-y7phsz_288">std::map</code>, <code class="code" id="-y7phsz_289">std::set</code>, <code class="code" id="-y7phsz_290">std::list</code></p></section><section class="chapter"><h5 id="4-4-5-random-access-iterators" data-toc="4-4-5-random-access-iterators">4.4.5 Random Access Iterators</h5><p id="-y7phsz_291">Same as bidirectional iterators, plus can be implemented or decremented by arbitrary amounts using + and -.</p><p id="-y7phsz_292"><span id="-y7phsz_293"><font style="color:#8a2be2">Use cases:</font></span> <code class="code" id="-y7phsz_294">std::vector</code>, <code class="code" id="-y7phsz_295">std::deque</code>, <code class="code" id="-y7phsz_296">std::string</code></p></section></section></section><section class="chapter"><h3 id="5-templates" data-toc="5-templates">5 Templates</h3><section class="chapter"><h4 id="5-1-template-functions" data-toc="5-1-template-functions">5.1 Template Functions</h4><div class="code-block" data-lang="cpp">
+template &lt;typename T&gt;
+std::pair&lt;T, T&gt; my_minmax(T a, T b) {
+    if (a &lt; b) return {a, b};
+    else return {b, a};
+}
+</div><p id="-y7phsz_299">The following code:</p><div class="code-block" data-lang="cpp">
+my_minmax(cout, cout);
+</div><p id="-y7phsz_301"><span id="-y7phsz_309"><font style="color:#ff00ff">Semantic error:</font></span> you can&rsquo;t call operator &lt; on two streams.</p><p id="-y7phsz_302"><span id="-y7phsz_310"><font style="color:#ff00ff">Conceptual error:</font></span> you can&rsquo;t find the min or max of two streams.</p><p id="-y7phsz_303">The compiler deduces the types and literally replaces the types. Compiler will produce semantic errors, not conceptual error.</p><div class="code-block" data-lang="cpp">
+template &lt;typename Collection, typename DataType&gt;
+int countOccurences(const Collection&amp; list, DataType val) {
+    int count = 0;
+    for (size_t i = 0; i &lt; list.size(); ++i) {
+        if (list[i] == val) ++count;
+    }
+    return count;
+}
+</div><p id="-y7phsz_305">Problem lies in indexing <code class="code" id="-y7phsz_311">list[i]</code>.</p><div class="code-block" data-lang="cpp">
+template &lt;typename Collection, typename DataType&gt;
+int countOccurences(const Collection&amp; list, DataType val) {
+    int count = 0;
+    for (auto iter = list.begin(); iter != list.end(); ++iter) {
+        if (*iter == val) ++count;
+    }
+    return count;
+}
+</div><p id="-y7phsz_307">Or:</p><div class="code-block" data-lang="cpp">
+template &lt;typename Collection, typename DataType&gt;
+int countOccurences(const Collection&amp; collection, const DataType&amp; val) {
+    int count = 0;
+    for (const auto&amp; element : collection) {
+        if (element == val) {
+            ++count;
+        }
+    }
+    return count;
+}
+</div></section></section><section class="chapter"><h3 id="6-functions-and-algorithms" data-toc="6-functions-and-algorithms">6 Functions and Algorithms</h3><section class="chapter"><h4 id="Lambda" data-toc="Lambda">6.1 Lambda Functions</h4><div class="code-block" data-lang="cpp">
+auto isLessThanLimit = [limit](auto val) -&gt; bool {
+    return val &lt; limit;
+};
+</div><ul class="list _bullet" id="-y7phsz_315"><li class="list__item" id="-y7phsz_323"><p id="-y7phsz_327"><code class="code" id="-y7phsz_328">auto</code>: We don't know the type, ask compiler.</p></li><li class="list__item" id="-y7phsz_324"><p id="-y7phsz_329"><code class="code" id="-y7phsz_330">[limit]</code>: Capture clause, gives access to outside variables.</p></li><li class="list__item" id="-y7phsz_325"><p id="-y7phsz_331"><code class="code" id="-y7phsz_332">(auto)</code>: Parameter list, can use auto!</p></li><li class="list__item" id="-y7phsz_326"><p id="-y7phsz_333"><code class="code" id="-y7phsz_334">-&gt; bool</code>: Return type, optional.</p></li></ul><p id="-y7phsz_316">Two types of capture clause: By reference or by value.</p><div class="code-block" data-lang="cpp">
+// capture all by value, except teas is by reference 
+auto func1 = [=, &amp;teas](parameters) -&gt; return-value {   
+    // body 
+};
+
+// capture all by reference, except banned is by value 
+auto func2 = [&amp;, banned](parameters) -&gt; return-value {   
+    // body 
+};
+</div><aside class="prompt" data-type="tip" data-title="" id="-y7phsz_318"><p id="-y7phsz_335"><code class="code" id="-y7phsz_340">std::function&lt;R(Args&hellip;)&gt;</code> is a generic wrapper for all things callable.</p><div class="code-block" data-lang="cpp">
+int add(int a, int b) { 
+    return a + b; 
+}
+int main() {
+    std::function&lt;int(int, int)&gt; func; // initially empty
+    func = add; // Assign a regular function
+    std::cout &lt;&lt; func(2, 3) &lt;&lt; std::endl; // Output: 5
+    func = [](int a, int b) { return a * b; }; // Reassign a lambda
+    std::cout &lt;&lt; func(2, 3) &lt;&lt; std::endl; // Output: 6
+    return 0;
+}
+</div><p id="-y7phsz_337">In this context, <code class="code" id="-y7phsz_341">std::function&lt;int(int, int)&gt;</code> can store any callable object as long as it matches the signature.</p><p id="-y7phsz_338"><span id="-y7phsz_342"><font style="color:#8a2be2">Benefit:</font></span></p><ol class="list _alpha-lower" id="-y7phsz_339" type="a"><li class="list__item" id="-y7phsz_343"><p id="-y7phsz_345"><span id="-y7phsz_346"><font style="color:#ff00ff">Type Erasure for Flexibility:</font></span> It lets you work with different callable objects through a common interface. You can pass <code class="code" id="-y7phsz_347">std::function</code> objects to functions or store them in data structures without knowing the exact type of the underlying callable.</p></li><li class="list__item" id="-y7phsz_344"><p id="-y7phsz_348"><span id="-y7phsz_349"><font style="color:#ff00ff">Enables Polymorphism with Callables:</font></span> You can have a function that accepts a std::function as a parameter, allowing it to work with different lambda functions or other callable types at runtime.</p></li></ol></aside><p id="-y7phsz_319"><code class="code" id="-y7phsz_350">std::bind</code> adapts existing function objects to create new ones with specific argument values pre-filled.</p><div class="code-block" data-lang="cpp">
+int multiplyAndAdd(int a, int b, int c) {
+    return (a * b) + c;
+}
+
+int main() {
+    auto operation = std::bind(multiplyAndAdd, std::placeholders::_1, 
+                                std::placeholders::_2, 4);
+    std::cout &lt;&lt; operation(2, 3) &lt;&lt; std::endl; // Output: 10 ((2*3) + 4)
+}
+</div><ul class="list _bullet" id="-y7phsz_321"><li class="list__item" id="-y7phsz_351"><p id="-y7phsz_354"><code class="code" id="-y7phsz_355">std::placeholders::_1</code> means &quot;take the first argument passed to operation&quot;.</p></li><li class="list__item" id="-y7phsz_352"><p id="-y7phsz_356"><code class="code" id="-y7phsz_357">std::placeholders::_2</code> means &quot;take the second argument passed to operation&quot;.</p></li><li class="list__item" id="-y7phsz_353"><p id="-y7phsz_358">4 is the third argument of <code class="code" id="-y7phsz_359">multiplyAndAdd</code>.</p></li></ul><aside class="prompt" data-type="warning" data-title="" id="-y7phsz_322"><p id="-y7phsz_360">Lambdas provide a convenient and expressive way to define objects that behave like functions. =&gt; Lambdas are a type of function object.</p></aside></section><section class="chapter"><h4 id="6-2-algorithms" data-toc="6-2-algorithms">6.2 Algorithms</h4><section class="chapter"><h5 id="6-2-1-std-sort" data-toc="6-2-1-std-sort">6.2.1 std::sort</h5><p id="-y7phsz_366"><span id="-y7phsz_374"><font style="color:#8a2be2">Syntax:</font></span></p><div class="code-block" data-lang="cpp">
+#include &lt;algorithm&gt; // Required header
+
+// 1. Basic Usage (Sorting using &lt; operator)
+template &lt;class RandomAccessIterator&gt;
+void sort(RandomAccessIterator first, RandomAccessIterator last);
+
+// 2. Custom Comparison Function 
+template &lt;class RandomAccessIterator, class Compare&gt;
+void sort(RandomAccessIterator first, RandomAccessIterator last, Compare comp); 
+</div><p id="-y7phsz_368"><span id="-y7phsz_375"><font style="color:#8a2be2">Example usage:</font></span></p><div class="code-block" data-lang="cpp">
+std::vector&lt;int&gt; numbers = {3, 1, 4, 1, 5};
+std::sort(numbers.begin(), numbers.end()); // Sort the entire vector
+
+std::sort(numbers.begin(), numbers.end(), std::greater&lt;int&gt;()); // Sort in descending order
+</div><p id="-y7phsz_370"><span id="-y7phsz_376"><font style="color:#8a2be2">Parameters:</font></span></p><ol class="list _decimal" id="-y7phsz_371" type="1"><li class="list__item" id="-y7phsz_377"><p id="-y7phsz_380">first (iterator): An iterator pointing to the beginning of the range you want to sort.</p></li><li class="list__item" id="-y7phsz_378"><p id="-y7phsz_381">last (iterator): An iterator pointing to one position past the end of the range to be sorted.</p></li><li class="list__item" id="-y7phsz_379"><p id="-y7phsz_382">comp (comparison function) (optional): A binary function (takes two arguments) that defines the sorting criterion. It should return true if the first argument should come before the second in the sorted order, and false otherwise.</p></li></ol><p id="-y7phsz_372"><span id="-y7phsz_383"><font style="color:#8a2be2">Important notes:</font></span></p><ul class="list _bullet" id="-y7phsz_373"><li class="list__item" id="-y7phsz_384"><p id="-y7phsz_387">You can sort a portion of the entire vector, array, etc.</p><div class="code-block" data-lang="none">
+std::vector&lt;int&gt; data = {5, 2, 8, 1, 9, 3};
+std::sort(data.begin(), data.begin() + 4); // Result: data = {1, 2, 5, 8, 9, 3}
+</div></li><li class="list__item" id="-y7phsz_385"><p id="-y7phsz_389">You can overload operator &lt; to define default sorting behavior.</p><div class="code-block" data-lang="cpp">
+struct Item {
+    int id;
+    std::string name;
+};
+// Stable Comparison
+bool compareByNameStable(const Item&amp; a, const Item&amp; b) {
+    if (a.name == b.name) {
+        return a.id &lt; b.id; // Keep original order based on 'id' if names are equal
+    }
+    return a.name &lt; b.name;
+}
+int main() {
+    std::vector&lt;Item&gt; items = {
+        {1, &quot;Apple&quot;},
+        {2, &quot;Banana&quot;},
+        {3, &quot;Apple&quot;} 
+    };
+    std::sort(items.begin(), items.end(), compareByNameStable);
+}
+</div></li><li class="list__item" id="-y7phsz_386"><p id="-y7phsz_391">Average case: <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="11.15ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 4928.3 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mi" transform="translate(2206.7,0)"><path data-c="6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(278,0)"></path><path data-c="67" d="M329 409Q373 453 429 453Q459 453 472 434T485 396Q485 382 476 371T449 360Q416 360 412 390Q410 404 415 411Q415 412 416 414V415Q388 412 363 393Q355 388 355 386Q355 385 359 381T368 369T379 351T388 325T392 292Q392 230 343 187T222 143Q172 143 123 171Q112 153 112 133Q112 98 138 81Q147 75 155 75T227 73Q311 72 335 67Q396 58 431 26Q470 -13 470 -72Q470 -139 392 -175Q332 -206 250 -206Q167 -206 107 -175Q29 -140 29 -75Q29 -39 50 -15T92 18L103 24Q67 55 67 108Q67 155 96 193Q52 237 52 292Q52 355 102 398T223 442Q274 442 318 416L329 409ZM299 343Q294 371 273 387T221 404Q192 404 171 388T145 343Q142 326 142 292Q142 248 149 227T179 192Q196 182 222 182Q244 182 260 189T283 207T294 227T299 242Q302 258 302 292T299 343ZM403 -75Q403 -50 389 -34T348 -11T299 -2T245 0H218Q151 0 138 -6Q118 -15 107 -34T95 -74Q95 -84 101 -97T122 -127T170 -155T250 -167Q319 -167 361 -139T403 -75Z" transform="translate(778,0)"></path></g><g data-mml-node="mo" transform="translate(3484.7,0)"><path data-c="2061" d=""></path></g><g data-mml-node="mi" transform="translate(3651.3,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mo" transform="translate(4539.3,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p></li></ul></section><section class="chapter"><h5 id="6-2-2-std-nth-element" data-toc="6-2-2-std-nth-element">6.2.2 std::nth_element</h5><p id="-y7phsz_393"><span id="-y7phsz_401"><font style="color:#8a2be2">Syntax:</font></span></p><div class="code-block" data-lang="cpp">
+#include &lt;algorithm&gt;
+
+template &lt;class RandomAccessIterator&gt;
+void nth_element (RandomAccessIterator first, RandomAccessIterator nth, 
+                  RandomAccessIterator last);
+
+// Optional: You can provide a custom comparison function
+template &lt;class RandomAccessIterator, class Compare&gt;
+void nth_element (RandomAccessIterator first, RandomAccessIterator nth,
+                  RandomAccessIterator last, Compare comp);
+</div><p id="-y7phsz_395"><span id="-y7phsz_402"><font style="color:#8a2be2">Example usage:</font></span></p><div class="code-block" data-lang="cpp">
+std::vector&lt;int&gt; numbers = {5, 2, 8, 1, 9, 3};
+
+std::nth_element(numbers.begin(), numbers.begin() + 2, numbers.end());
+// Output: 2 1 3 8 9 5 (The element at index 2 is now '3', 
+//          which is the 3rd smallest, but the rest are not sorted)
+</div><p id="-y7phsz_397"><span id="-y7phsz_403"><font style="color:#8a2be2">Parameters:</font></span></p><ol class="list _decimal" id="-y7phsz_398" type="1"><li class="list__item" id="-y7phsz_404"><p id="-y7phsz_408">first: Iterator to the beginning of the range.</p></li><li class="list__item" id="-y7phsz_405"><p id="-y7phsz_409">nth: Iterator pointing to the position you want the nth element to be placed in.</p></li><li class="list__item" id="-y7phsz_406"><p id="-y7phsz_410">last: Iterator to one past the end of the range.</p></li><li class="list__item" id="-y7phsz_407"><p id="-y7phsz_411">comp (optional): A binary comparison function, similar to std::sort.</p></li></ol><p id="-y7phsz_399"><span id="-y7phsz_412"><font style="color:#8a2be2">Important notes:</font></span></p><ul class="list _bullet" id="-y7phsz_400"><li class="list__item" id="-y7phsz_413"><p id="-y7phsz_416">With this, you can efficiently find the median of a dataset without fully sorting it, or determine the <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.878ex" height="1.956ex" role="img" focusable="false" viewBox="0 -853.7 1272.2 864.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g><g data-mml-node="TeXAtom" transform="translate(554,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mtext"><path data-c="74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z"></path><path data-c="68" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 124T102 167T103 217T103 272T103 329Q103 366 103 407T103 482T102 542T102 586T102 603Q99 622 88 628T43 637H25V660Q25 683 27 683L37 684Q47 685 66 686T103 688Q120 689 140 690T170 693T181 694H184V367Q244 442 328 442Q451 442 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(389,0)"></path></g></g></g></g></g></svg></mjx-container> smallest or largest element.</p></li><li class="list__item" id="-y7phsz_414"><p id="-y7phsz_418">It sorts so <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="3.057ex" height="1.956ex" role="img" focusable="false" viewBox="0 -853.7 1351.2 864.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="TeXAtom" transform="translate(633,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mtext"><path data-c="74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z"></path><path data-c="68" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 124T102 167T103 217T103 272T103 329Q103 366 103 407T103 482T102 542T102 586T102 603Q99 622 88 628T43 637H25V660Q25 683 27 683L37 684Q47 685 66 686T103 688Q120 689 140 690T170 693T181 694H184V367Q244 442 328 442Q451 442 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(389,0)"></path></g></g></g></g></g></svg></mjx-container> element is in correct position, and all elements smaller to left, larger to right, but the elements before the <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="3.057ex" height="1.956ex" role="img" focusable="false" viewBox="0 -853.7 1351.2 864.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="TeXAtom" transform="translate(633,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mtext"><path data-c="74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z"></path><path data-c="68" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 124T102 167T103 217T103 272T103 329Q103 366 103 407T103 482T102 542T102 586T102 603Q99 622 88 628T43 637H25V660Q25 683 27 683L37 684Q47 685 66 686T103 688Q120 689 140 690T170 693T181 694H184V367Q244 442 328 442Q451 442 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(389,0)"></path></g></g></g></g></g></svg></mjx-container> element are not guaranteed to be sorted among themselves, and neither are the elements after it.</p></li><li class="list__item" id="-y7phsz_415"><p id="-y7phsz_421">Average case: <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.495ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2429 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mo" transform="translate(2040,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p></li></ul></section><section class="chapter"><h5 id="6-2-3-std-stable-partition" data-toc="6-2-3-std-stable-partition">6.2.3 std::stable_partition</h5><p id="-y7phsz_423"><span id="-y7phsz_429"><font style="color:#8a2be2">Syntax:</font></span></p><div class="code-block" data-lang="cpp">
+#include &lt;algorithm&gt; // Required header
+
+template &lt;class BidirectionalIterator, class UnaryPredicate&gt;
+BidirectionalIterator stable_partition (BidirectionalIterator first,
+                                       BidirectionalIterator last, 
+                                       UnaryPredicate pred); 
+</div><p id="-y7phsz_425"><span id="-y7phsz_430"><font style="color:#8a2be2">Parameters:</font></span></p><ol class="list _decimal" id="-y7phsz_426" type="1"><li class="list__item" id="-y7phsz_431"><p id="-y7phsz_437">BidirectionalIterator: A template parameter indicating the type of iterators used. These iterators must support bidirectional movement (like those from std::list, std::vector, std::deque).</p></li><li class="list__item" id="-y7phsz_432"><p id="-y7phsz_438">first (BidirectionalIterator): An iterator to the beginning of the range you want to partition.</p></li><li class="list__item" id="-y7phsz_433"><p id="-y7phsz_439">last (BidirectionalIterator): An iterator to one past the end of the range to be partitioned.</p></li><li class="list__item" id="-y7phsz_434"><p id="-y7phsz_440">UnaryPredicate: A template parameter representing the type of the predicate function.</p></li><li class="list__item" id="-y7phsz_435"><p id="-y7phsz_441">pred (UnaryPredicate): A function that takes a single argument (an element from the range) and returns a bool:</p></li><li class="list__item" id="-y7phsz_436"><ul class="list _bullet" id="-y7phsz_442"><li class="list__item" id="-y7phsz_443"><p id="-y7phsz_445">true: The element satisfies the partitioning criterion.</p></li><li class="list__item" id="-y7phsz_444"><p id="-y7phsz_446">false: The element does not satisfy the criterion.</p></li></ul></li></ol><p id="-y7phsz_427"><span id="-y7phsz_447"><font style="color:#8a2be2">Example Usage:</font></span></p><div class="code-block" data-lang="cpp">
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+
+// A simple struct to represent a course (you can customize this)
+struct Course {
+    std::string name;
+};
+
+int main() {
+    // Sample course data
+    std::vector&lt;Course&gt; courses = {
+        {&quot;CS101&quot;},
+        {&quot;MATH101&quot;},
+        {&quot;CS202&quot;},
+        {&quot;PHYS101&quot;},
+        {&quot;CS301&quot;}
+    };
+
+    std::string dep = &quot;CS&quot;;
+
+    // Lambda function to check if a course belongs to the &quot;CS&quot; department
+    auto isDep = [dep](const Course&amp; course) {
+        return course.name.size() &gt;= dep.size() &amp;&amp; 
+               course.name.substr(0, dep.size()) == dep;
+    };
+
+    // Partition the courses vector, keeping &quot;CS&quot; courses at the beginning
+    auto iter = std::stable_partition(courses.begin(), courses.end(), isDep);
+
+    // Remove non-&quot;CS&quot; courses
+    courses.erase(iter, courses.end());
+
+    // Output the remaining &quot;CS&quot; courses
+    std::cout &lt;&lt; &quot;CS Courses:\n&quot;;
+    for (const Course&amp; course : courses) {
+        std::cout &lt;&lt; course.name &lt;&lt; std::endl;
+    }
+
+    return 0;
+}
+</div></section><section class="chapter"><h5 id="6-2-4-std-copy-if" data-toc="6-2-4-std-copy-if">6.2.4 std::copy_if</h5><p id="-y7phsz_448"><span id="-y7phsz_453"><font style="color:#8a2be2">Syntax:</font></span></p><div class="code-block" data-lang="cpp">
+#include &lt;algorithm&gt; // Required header
+
+template &lt;class InputIterator, class OutputIterator, class UnaryPredicate&gt;
+OutputIterator copy_if (InputIterator first, InputIterator last,
+                        OutputIterator result, UnaryPredicate pred);
+</div><ol class="list _decimal" id="-y7phsz_450" type="1"><li class="list__item" id="-y7phsz_454"><p id="-y7phsz_462">InputIterator: Type of iterator used for the input range.</p></li><li class="list__item" id="-y7phsz_455"><p id="-y7phsz_463">OutputIterator: Type of iterator used for the output range (where copied elements go).</p></li><li class="list__item" id="-y7phsz_456"><p id="-y7phsz_464">first (InputIterator): An iterator to the beginning of the input range.</p></li><li class="list__item" id="-y7phsz_457"><p id="-y7phsz_465">last (InputIterator): An iterator to one past the end of the input range.</p></li><li class="list__item" id="-y7phsz_458"><p id="-y7phsz_466">result (OutputIterator): An iterator to the beginning of the output range.</p></li><li class="list__item" id="-y7phsz_459"><p id="-y7phsz_467">UnaryPredicate: Type of the predicate function.</p></li><li class="list__item" id="-y7phsz_460"><p id="-y7phsz_468">pred (UnaryPredicate): A function that takes a single argument (an element from the input range) and returns:</p></li><li class="list__item" id="-y7phsz_461"><ul class="list _bullet" id="-y7phsz_469"><li class="list__item" id="-y7phsz_470"><p id="-y7phsz_472">true: Copy the element to the output range.</p></li><li class="list__item" id="-y7phsz_471"><p id="-y7phsz_473">false: Skip the element.</p></li></ul></li></ol><p id="-y7phsz_451"><span id="-y7phsz_474"><font style="color:#8a2be2">Example Usage:</font></span></p><div class="code-block" data-lang="cpp">
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;string&gt;
+
+struct Course {
+    std::string name;
+};
+
+int main() {
+    std::vector&lt;Course&gt; csCourses = {
+        {&quot;CS101&quot;},
+        {&quot;MATH101&quot;},
+        {&quot;CS202&quot;},
+        {&quot;PHYS101&quot;},
+        {&quot;CS301&quot;}
+    };
+
+    std::vector&lt;Course&gt; filteredCourses; 
+    std::string dep = &quot;CS&quot;;
+
+    auto isDep = [dep](const Course&amp; course) {
+        return course.name.size() &gt;= dep.size() &amp;&amp; 
+               course.name.substr(0, dep.size()) == dep;
+    };
+
+    // Copy matching courses to 'filteredCourses'
+    // Use back_inserter to add more space!
+    std::copy_if(csCourses.begin(), csCourses.end(), 
+                 std::back_inserter(filteredCourses), isDep);
+
+    std::cout &lt;&lt; &quot;Filtered CS Courses:\n&quot;;
+    for (const Course&amp; course : filteredCourses) {
+        std::cout &lt;&lt; course.name &lt;&lt; std::endl;
+    }
+
+    return 0;
+}
+</div></section><section class="chapter"><h5 id="6-2-5-std-remove-if" data-toc="6-2-5-std-remove-if">6.2.5 std::remove_if</h5><p id="-y7phsz_475"><span id="-y7phsz_478"><font style="color:#8a2be2">Syntax:</font></span></p><div class="code-block" data-lang="cpp">
+#include &lt;algorithm&gt; // Required header
+
+template &lt;class ForwardIterator, class UnaryPredicate&gt;
+ForwardIterator remove_if (ForwardIterator first, ForwardIterator last,
+                           UnaryPredicate pred);
+</div><ol class="list _decimal" id="-y7phsz_477" type="1"><li class="list__item" id="-y7phsz_479"><p id="-y7phsz_485">ForwardIterator: Type of iterator used for the range. Must support forward movement.</p></li><li class="list__item" id="-y7phsz_480"><p id="-y7phsz_486">first (ForwardIterator): An iterator to the beginning of the range.</p></li><li class="list__item" id="-y7phsz_481"><p id="-y7phsz_487">last (ForwardIterator): An iterator to one past the end of the range .</p></li><li class="list__item" id="-y7phsz_482"><p id="-y7phsz_488">UnaryPredicate: Type of the predicate function.</p></li><li class="list__item" id="-y7phsz_483"><p id="-y7phsz_489">pred (UnaryPredicate): A function that takes a single argument (an element from the range) and returns:</p></li><li class="list__item" id="-y7phsz_484"><ul class="list _bullet" id="-y7phsz_490"><li class="list__item" id="-y7phsz_491"><p id="-y7phsz_493">true: The element should be &quot;removed.&quot;</p></li><li class="list__item" id="-y7phsz_492"><p id="-y7phsz_494">false: The element should be kept.</p></li></ul></li></ol></section></section></section></section><section class="chapter"><h2 id="object-oriented-programming" data-toc="object-oriented-programming">Ⅲ Object-Oriented Programming</h2><section class="chapter"><h3 id="7-classes-and-consts" data-toc="7-classes-and-consts">7 Classes and Consts</h3><section class="chapter"><h4 id="7-1-classes" data-toc="7-1-classes">7.1 Classes</h4><p id="-y7phsz_501"><span id="-y7phsz_510"><font style="color:#8a2be2">Definitions:</font></span></p><ul class="list _bullet" id="-y7phsz_502"><li class="list__item" id="-y7phsz_511"><p id="-y7phsz_519"><span id="-y7phsz_520"><font style="color:#ff8c00">Class:</font></span> a template for a new type of objects.</p></li><li class="list__item" id="-y7phsz_512"><p id="-y7phsz_521"><span id="-y7phsz_522"><font style="color:#ff8c00">Object:</font></span> Entity that combines state and behavior.</p></li><li class="list__item" id="-y7phsz_513"><p id="-y7phsz_523"><span id="-y7phsz_524"><font style="color:#ff8c00">Member variables (instance variables, fields):</font></span> Define state inside each object.</p></li><li class="list__item" id="-y7phsz_514"><p id="-y7phsz_525"><span id="-y7phsz_526"><font style="color:#ff8c00">Member functions (methods):</font></span> Define behavior inside each object.</p></li><li class="list__item" id="-y7phsz_515"><p id="-y7phsz_527"><span id="-y7phsz_528"><font style="color:#ff8c00">Constructor:</font></span> Initializes new objects as they are created.</p></li><li class="list__item" id="-y7phsz_516"><p id="-y7phsz_529"><span id="-y7phsz_531"><font style="color:#ff8c00">Destructor:</font></span> Called when the object is deleted by the program.</p><ul class="list _bullet" id="-y7phsz_530"><li class="list__item" id="-y7phsz_532"><p id="-y7phsz_534">Delete any pointers stored as private members.</p></li><li class="list__item" id="-y7phsz_533"><p id="-y7phsz_535">delete[] any arrays stored as private members.</p></li></ul></li><li class="list__item" id="-y7phsz_517"><p id="-y7phsz_536"><span id="-y7phsz_537"><font style="color:#ff8c00">Client code:</font></span> Code that uses the objects defind.</p></li><li class="list__item" id="-y7phsz_518"><p id="-y7phsz_538"><span id="-y7phsz_539"><font style="color:#ff8c00">Encapsulation:</font></span> Hiding implementation details from the client code.</p></li></ul><p id="-y7phsz_503">C++ separates classes into two kinds of files:</p><ul class="list _bullet" id="-y7phsz_504"><li class="list__item" id="-y7phsz_540"><p id="-y7phsz_542"><span id="-y7phsz_543"><font style="color:#ff00ff">Header File (<span id="-y7phsz_544"><font style="color:#ff4500">.h</font></span>, .hh, .hpp):</font></span> Containing the interface (declarations).</p></li><li class="list__item" id="-y7phsz_541"><p id="-y7phsz_545"><span id="-y7phsz_546"><font style="color:#ff00ff">Source File (<span id="-y7phsz_547"><font style="color:#ff4500">.cpp</font></span>, .cc, .cxx, .c++, .C):</font></span> Containing definitions (method bodies).</p></li></ul><p id="-y7phsz_505"><span id="-y7phsz_548"><font style="color:#8a2be2">Example (header file):</font></span></p><div class="code-block" data-lang="cpp">
+// Protection in case multiple .cpp files include this header, so 
+// that its contents won't get declared twice.
+#ifndef MYCLASS_H
+#define MYCLASS_H
+
+class MyClass {
+public:
+    MyClass(); // Constructor
+    ~MyClass(); // Destructor
+    void myMethod(); // Member function (behavior inside each function)
+    int getMyVariable(); 
+private:
+    int myVariable; // Member variable (data inside each object)
+};  // Semicolons!
+
+#endif
+</div><p id="-y7phsz_507"><span id="-y7phsz_549"><font style="color:#8a2be2">Example (source file):</font></span></p><div class="code-block" data-lang="cpp">
+# include &quot;MyClass.h&quot;
+
+MyClass::MyClass() {
+    myVariable = 0; // Initialize member variable
+}
+
+void MyClass::myMethod() {
+    myVariable++;
+}
+
+MyClass::~MyClass() {
+    // Simple destructor implementation
+}
+
+int MyClass::getMyVariable() {
+    return myVariable;
+}
+</div><aside class="prompt" data-type="note" data-title="" id="-y7phsz_509"><p id="-y7phsz_550">Why so many extensions?</p><p id="-y7phsz_551">Depend on the compilers!</p><ul class="list _bullet" id="-y7phsz_552"><li class="list__item" id="-y7phsz_553"><p id="-y7phsz_556">Historically, used .C</p></li><li class="list__item" id="-y7phsz_554"><p id="-y7phsz_557">Now, Unix most uses <span id="-y7phsz_558"><font style="color:#ff4500">.cc</font></span>, and outside Unix mostly uses <span id="-y7phsz_559"><font style="color:#ff4500">.cpp</font></span></p></li><li class="list__item" id="-y7phsz_555"><p id="-y7phsz_560">.h is technically for C programs, so if mixing C and C++ code, use .hh instead</p></li></ul></aside></section><section class="chapter"><h4 id="7-2-consts" data-toc="7-2-consts">7.2 Consts</h4><p id="-y7phsz_561">Consts help us find bugs, and allow us to reason about whether a variable will be changed.</p><p id="-y7phsz_562">Within a function that takes a const parameter, you cannot call non-const member functions (if the parameter is an object) or modify the value (if it's a fundamental type or a pointer to const data) of that parameter.</p><p id="-y7phsz_563"><span id="-y7phsz_569"><font style="color:#8a2be2">Example for value:</font></span></p><div class="code-block" data-lang="cpp">
+int plus(const int&amp; x) {
+    return x + 1; // Error: x is const
+}
+
+int plus(const int x) {
+    return x + 1; // OK: x is a copy
+}
+</div><p id="-y7phsz_565"><span id="-y7phsz_570"><font style="color:#8a2be2">Example for member functions:</font></span></p><div class="code-block" data-lang="cpp">
+struct Planet { 
+    int countPopulation() const; 
+    void deathStar(); 
+};
+
+int Planet::countPopulation() const { 
+    return 42;
+}
+
+void Planet::deathStar() { 
+    cout &lt;&lt; &quot;BOOM&quot; &lt;&lt; endl; 
+}
+
+void evil(const Planet &amp;p) { 
+    // OK: countPopulation is const 
+    cout &lt;&lt; p.countPopulation() &lt;&lt; endl; 
+    // ERROR: deathStar isn't const 
+    p.deathStar(); 
+}
+</div><section class="chapter"><h5 id="7-2-1-const-pointers" data-toc="7-2-1-const-pointers">7.2.1 Const Pointers</h5><div class="code-block" data-lang="cpp">
+// constant pointer to a non-constant int
+// (*p)++; OK! 
+// p++; NOT allowed!
+int * const p;
+
+// non-constant pointer to a constant 
+int const int* p;
+int const* p;
+
+// constant pointer to a constant 
+int const int* const p; 
+int const* const p;
+</div><aside class="prompt" data-type="warning" data-title="" id="-y7phsz_572"><p id="-y7phsz_573">When in doubt, read from right to left!</p></aside></section><section class="chapter"><h5 id="7-2-2-const-iterators" data-toc="7-2-2-const-iterators">7.2.2 Const Iterators</h5><div class="code-block" data-lang="cpp">
+const vector&lt;int&gt;::iterator itr = v.begin(); 
+*itr = 5; // OK! changing what itr points to 
+++itr; // ERROR! can’t modify itr
+
+vector&lt;int&gt;::const_iterator itr = v.begin(); 
+*itr = 5; //ERROR! can’t change value of itr 
+++itr; //OK! changing v 
+int value = *itr; //OK! reading from itr
+</div></section></section></section><section class="chapter"><h3 id="8-operators" data-toc="8-operators">8 Operators</h3></section><section class="chapter"><h3 id="9-inheritance" data-toc="9-inheritance">9 Inheritance</h3><p id="-y7phsz_575"><span id="-y7phsz_581"><font style="color:#8a2be2">Definitions:</font></span></p><ul class="list _bullet" id="-y7phsz_576"><li class="list__item" id="-y7phsz_582"><p id="-y7phsz_584"><span id="-y7phsz_585"><font style="color:#ff8c00">Hypernym</font></span>: A word with a broad meaning constituting a category into which words with more specific meanings fall.</p></li><li class="list__item" id="-y7phsz_583"><p id="-y7phsz_586"><span id="-y7phsz_587"><font style="color:#ff8c00">Hyponym</font></span>: Opposite of hypernym.</p></li></ul><p id="-y7phsz_577">For example, tree is hyponym of plant, and plant is hypernym of tree.</p><section class="chapter"><h4 id="9-1-overriding-and-overloading" data-toc="9-1-overriding-and-overloading">9.1 Overriding and Overloading</h4><p id="-y7phsz_588"><span id="-y7phsz_600"><font style="color:#8a2be2">Definition:</font></span></p><ul class="list _bullet" id="-y7phsz_589"><li class="list__item" id="-y7phsz_601"><p id="-y7phsz_603"><span id="-y7phsz_604"><font style="color:#ff8c00">Overloading</font></span>: Methods with the same name but different signature.</p></li><li class="list__item" id="-y7phsz_602"><p id="-y7phsz_605"><span id="-y7phsz_606"><font style="color:#ff8c00">Overriding</font></span>: A subclass to provide a specific implementation of a method that is already provided by its parent class or interface.</p></li></ul><aside class="prompt" data-type="note" data-title="" id="-y7phsz_590"><p id="-y7phsz_607">This is an implementation of overloading in the same class.</p></aside><p id="-y7phsz_591">Java</p><div class="code-block" data-lang="java">
+    // part of code from Quicksort
+    public static void sort(Comparable[] a) {
+        sort(a, 0, a.length - 1);
+    }
+
+    private static void sort(Comparable[] a, int lo, int hi) {
+        if (hi &lt;= lo) return;
+        int j = partition(a, lo, hi);
+        sort(a, lo, j - 1);
+        sort(a, j + 1, hi);
+    }
+</div><aside class="prompt" data-type="note" data-title="" id="-y7phsz_593"><p id="-y7phsz_608">This is an implementation of overloading in different classes.</p></aside><p id="-y7phsz_594">Java</p><div class="code-block" data-lang="java">
+class Shape {
+    public void calculateArea(int side) { 
+        System.out.println(&quot;Area of a square: &quot; + (side * side)); 
+    }
+}
+
+class Rectangle extends Shape {
+    public void calculateArea(int length, int width) {
+        System.out.println(&quot;Area of a rectangle: &quot; + (length * width));
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Rectangle myRectangle = new Rectangle();
+
+        myRectangle.calculateArea(5);      // Calls Shape's calculateArea (inherited)
+        myRectangle.calculateArea(4, 6);  // Calls Rectangle's calculateArea (overloaded)
+    }
+}
+</div><aside class="prompt" data-type="note" data-title="" id="-y7phsz_596"><p id="-y7phsz_609">This is an implementation of overriding.</p></aside><p id="-y7phsz_597">Java</p><div class="code-block" data-lang="java">
+interface Animal { 
+    void makeSound(); // Abstract method declaration
+}
+
+class Dog implements Animal { // Implementing the interface
+    @Override
+    public void makeSound() {
+        System.out.println(&quot;Woof!&quot;);
+    }
+}
+
+class Cat implements Animal { // Implementing the interface
+    @Override
+    public void makeSound() {
+        System.out.println(&quot;Meow!&quot;);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal myDog = new Dog();       
+        Animal myCat = new Cat();       
+
+        myDog.makeSound();    // Output: Woof!
+        myCat.makeSound();    // Output: Meow!
+    }
+}
+</div><aside class="prompt" data-type="tip" data-title="" id="-y7phsz_599"><p id="-y7phsz_610">For Java, better use <code class="code" id="-y7phsz_613">@Override</code>!</p><p id="-y7phsz_611"><span id="-y7phsz_614"><font style="color:#8a2be2">Reasons:</font></span></p><ul class="list _bullet" id="-y7phsz_612"><li class="list__item" id="-y7phsz_615"><p id="-y7phsz_617"><span id="-y7phsz_618"><font style="color:#ff00ff">Protect against typos:</font></span> If you say <code class="code" id="-y7phsz_619">@Override</code>, but the method isn't actually overriding anything, you will get a compile error.</p></li><li class="list__item" id="-y7phsz_616"><p id="-y7phsz_620"><span id="-y7phsz_621"><font style="color:#ff00ff">Reminder:</font></span> Reminds programmer that method definition came from somewhere higher up in the inheritance hierarchy.</p></li></ul></aside></section><section class="chapter"><h4 id="9-2-types-of-inheritance-java" data-toc="9-2-types-of-inheritance-java">9.2 Types of Inheritance (Java)</h4><ol class="list _alpha-lower" id="-y7phsz_622" type="a"><li class="list__item" id="-y7phsz_626"><p id="-y7phsz_628"><span id="-y7phsz_631"><font style="color:#ff8c00">Interface Inheritance:</font></span></p><p id="-y7phsz_629">Specifying the capabilities of a subclass using the <code class="code" id="-y7phsz_632">implements</code> keyword is known as <span id="-y7phsz_633"><b><u>interface inheritance</u></b></span>.</p><ul class="list _bullet" id="-y7phsz_630"><li class="list__item" id="-y7phsz_634"><p id="-y7phsz_638"><span id="-y7phsz_639"><font style="color:#ff8c00">Interface:</font></span> The list of all method signatures.</p></li><li class="list__item" id="-y7phsz_635"><p id="-y7phsz_640"><span id="-y7phsz_641"><font style="color:#ff8c00">Inheritance:</font></span> The subclass &quot;inherits&quot; the interface from a superclass.</p></li><li class="list__item" id="-y7phsz_636"><p id="-y7phsz_642">Specifies what the subclass can do, but not how.</p></li><li class="list__item" id="-y7phsz_637"><p id="-y7phsz_643">Subclasses <span id="-y7phsz_644"><u>must</u></span> override all of these methods, will fail to compile otherwise!</p></li></ul></li><li class="list__item" id="-y7phsz_627"><p id="-y7phsz_645"><span id="-y7phsz_646"><font style="color:#ff8c00">Implementation Inheritance:</font></span> Subclasses can inherit signatures AND implementation.</p></li></ol><p id="-y7phsz_623">Java</p><div class="code-block" data-lang="java">
+interface Animal {
+    default void makeSound() {
+        System.out.println(&quot;Generic animal sound&quot;);
+    }
+
+    void eat(); 
+}
+
+class Dog implements Animal {
+    @Override
+    public void eat() {
+        System.out.println(&quot;Dog is eating&quot;);
+    }
+}
+
+class Cat implements Animal {
+    @Override
+    public void eat() {
+        System.out.println(&quot;Cat is eating&quot;);
+    }
+
+    @Override
+    public void makeSound() {
+        System.out.println(&quot;Meow!&quot;);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Dog();
+        Cat myCat = new Cat();
+
+        myDog.makeSound(); // Output: Generic animal sound (using default)
+        myDog.eat();      // Output: Dog is eating
+
+        myCat.makeSound(); // Output: Meow! (overridden)
+        myCat.eat();      // Output: Cat is eating
+    }
+}
+</div><div class="table-wrapper"><table class="wide" id="-y7phsz_625"><thead><tr class="ijRowHead" id="-y7phsz_647"><th id="-y7phsz_650"><p>Compile-time Type</p></th><th id="-y7phsz_651"><p>Run-time Type</p></th></tr></thead><tbody><tr id="-y7phsz_648"><td id="-y7phsz_652"><p>Static type, specified at <span id="-y7phsz_654"><b>declaration</b></span></p></td><td id="-y7phsz_653"><p>Dynamic type, specified at <span id="-y7phsz_655"><b>instantiation</b></span></p></td></tr><tr id="-y7phsz_649"><td id="-y7phsz_656"><p>Never changes</p></td><td id="-y7phsz_657"><p>Equal to the type of object being pointed at</p></td></tr></tbody></table></div></section><section class="chapter"><h4 id="3-3" data-toc="3-3">3.3</h4></section></section></section><section class="chapter"><h2 id="modern-c" data-toc="modern-c">Ⅳ Modern C++</h2></section><div class="last-modified">Last modified: 29 八月 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="get-started.html" class="navigation-links__prev">Get Started</a><a href="computer-architecture.html" class="navigation-links__next">Computer Architecture</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b408/app.js"></script></body></html>
