@@ -1,6 +1,6 @@
 # Computer Science Study Notes
 
-![Favicon](Writerside/images/photo.png)
+![Favicon](photo.png)
 
 > *We are all lost stars, trying to light up the dark.*
 
