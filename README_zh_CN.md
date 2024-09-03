@@ -1,6 +1,6 @@
 # 计算机科学学习笔记
 
-![Favicon](photo.png)
+![Favicon](Writerside/images/photo.png)
 
 > *我们都是迷失在璀璨梦境中的繁星，不顾一切只为点亮黑暗。*
 
@@ -69,6 +69,10 @@ For English version please check [here](README.md)
 ### Topic 5: 操作系统
 
 1. CS162: Operating System (UC Berkeley) by Professor John Kubiatowicz and the rest of CS162 staff.
+
+### Topic 6: 数据库系统
+
+1. CS186: Introduction to Database Systems (UC Berkeley) by Professor Alvin Cheung, Joe Hellerstein and the rest of CS186 staff.
 
 ## 4 如何使用
 
