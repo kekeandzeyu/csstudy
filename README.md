@@ -1,6 +1,6 @@
 # Computer Science Study Notes
 
-![Favicon](Writerside/images/photo.png)
+![Favicon](photo.png)
 
 > *We are all lost stars, trying to light up the dark.*
 
@@ -53,6 +53,8 @@ If someone's original work is used but not mentioned, or being misused, either w
 3. CS106B: Programming Abstractions (Stanford University) by Professor Marty Stepp and the rest of CS106B staff.
 
 4. CS61A: Structure and Interpretation of Computer Programs (UC Berkeley) by Professor John DeNero and the rest of CS61A staff.
+
+5. <https://en.wikipedia.org/wiki/Namespace>.
 
 > Note: Content of CS61A and CS61B are partly used for the Object-Oriented part.
 

@@ -1,6 +1,6 @@
 # 计算机科学学习笔记
 
-![Favicon](Writerside/images/photo.png)
+![Favicon](photo.png)
 
 > *我们都是迷失在璀璨梦境中的繁星，不顾一切只为点亮黑暗。*
 
@@ -53,6 +53,8 @@ For English version please check [here](README.md)
 3. CS106B: Programming Abstractions (Stanford University) by Professor Marty Stepp and the rest of CS106B staff.
 
 4. CS61A: Structure and Interpretation of Computer Programs (UC Berkeley) by Professor John DeNero and the rest of CS61A staff.
+
+5. <https://en.wikipedia.org/wiki/Namespace>.
 
 > 注意：CS61A和CS61B部分内容被用于面向对象编程部分。
 
