@@ -20,7 +20,7 @@ I took down notes carefully when studying. With the the content of my notes gett
 
 1. The author of the notes is not an EECS student, and some errors and mistakes cannot be avoided. Sorry for any inconvenience it might cause.
 
-2. Some of the pictures in the notes come from Wikipedia. Out of consideration of copyright, I didn't modify the pictures. However, some of them do not have background, which cannot be seen clearly in the dark theme. The notes are in the dark theme by default; it is highly recommended that you turned into light mode by clicking the button on the left side of the search bar.
+2. Some of the pictures in the notes come from Wikipedia. Out of consideration of copyright, I didn't modify the pictures. However, some of them do not have background, which cannot be seen clearly in the dark theme. Therefore, it is highly recommended that you turned into light mode by clicking the button on the left side of the search bar.
 
 3. The notes will be released in the form of pdf article. You will see it in the release part.
 
@@ -30,19 +30,21 @@ I took down notes carefully when studying. With the the content of my notes gett
 
 If someone's original work is used but not mentioned, or being misused, either way please contact me via email for deletion, thanks.
 
-### Topic 1: Data Structures and Algorithms &#8544; & &#8545;
+### Topic 1: Data Structures and Algorithms Part &#8544;, &#8545; & &#8546;
 
 1. Algorithms &#8544; & &#8545; (Coursera) by Professor Robert Sedgewick & Kevin Wayne.
 
-2. MIT 6.006: Introduction to Algorithms (MIT) by Professor Erik Demaine,  Justin Solomonm, Dr. Jason Ku (Spring 2020).
+2. CS61B: Data Structures and Algorithms (UC Berkeley) by Professor Josh Hug and the rest of CS61B staff.
 
-3. By Aeroid - Own work, CC BY-SA 4.0, <https://commons.wikimedia.org/w/index.php?curid=137790829>.
+3. MIT 6.006: Introduction to Algorithms (MIT) by Professor Erik Demaine,  Justin Solomonm, Dr. Jason Ku (Spring 2020).
 
-4. <https://en.wikipedia.org/wiki/Tree_traversal>.
+4. By Aeroid - Own work, CC BY-SA 4.0, <https://commons.wikimedia.org/w/index.php?curid=137790829>.
 
-5. By The original uploader was Jasampler at Spanish Wikipedia. - Transferred from es.wikipedia to Commons., Public Domain, <https://commons.wikimedia.org/w/index.php?curid=1755344>.
+5. <https://en.wikipedia.org/wiki/Tree_traversal>.
 
-6. <https://en.wikipedia.org/wiki/Catalan_number>.
+6. By The original uploader was Jasampler at Spanish Wikipedia. - Transferred from es.wikipedia to Commons., Public Domain, <https://commons.wikimedia.org/w/index.php?curid=1755344>.
+
+7. <https://en.wikipedia.org/wiki/Catalan_number>.
 
 ### Topic 2: C++ Programming
 
