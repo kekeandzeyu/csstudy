@@ -19,7 +19,7 @@ struct Student {
     string state; // separate these by semicolons 
     int age; 
 };
-\/
+
 Student s; 
 s.name = &quot;Haven&quot;; 
 s.state = &quot;AR&quot;; 
@@ -35,21 +35,21 @@ int numTwo {12.0};
 #include &lt;iostream&gt;
 #include &lt;tuple&gt;
 #include &lt;string&gt;
-\/
+
 std::tuple&lt;std::string, std::string, std::string&gt; getclassInfo() {
     std::string className = &quot;CS106L&quot;;
     std::string buildingName = &quot;Turing Auditorium&quot;;
     std::string language = &quot;C++&quot;;
     return {className, buildingName, language};
 }
-\/
+
 int main() {
     auto [className, buildingName, language] = getclassInfo();
-\/
+
     std::cout &lt;&lt; &quot;Come to &quot; &lt;&lt; buildingName &lt;&lt; &quot; and join us for &quot; &lt;&lt; className
     &lt;&lt; &quot; to learn &quot; &lt;&lt; language &lt;&lt; &quot;!&quot; &lt;&lt; std::endl;
     // Output: Come to Turing Auditorium and join us for CS106L to learn C++!
-\/
+
     return 0;
 }
     </div></li></ol><p id="k1n12_109"><span id="k1n12_123"><font style="color:#8a2be2">Advantages for Uniform Initialization:</font></span></p><ol class="list _decimal" id="k1n12_110" type="1"><li class="list__item" id="k1n12_124"><p id="k1n12_126">It's safe! It doesn't allow for narrowing conversions &mdash; which can lead to unexpected behaviour (or critical system failures)</p></li><li class="list__item" id="k1n12_125"><p id="k1n12_127">It's ubiquitous! it works for all types like vectors, maps, and custom classes, among other things!</p></li></ol></section><section class="chapter"><h4 id="3-2-references" data-toc="3-2-references">3.2 References</h4><p id="k1n12_128"><span id="k1n12_132"><font style="color:#8a2be2">Example:</font></span></p><div class="code-block" data-lang="cpp">
@@ -81,59 +81,59 @@ std::ostringstream oss(&quot;Ito-En Green Tea&quot;);
 std::cout &lt;&lt; oss.str() &lt;&lt; std::endl; // Ito-En Green Tea
 oss &lt;&lt; &quot;16.9 Ounces&quot;;
 std::cout &lt;&lt; oss.str() &lt;&lt; std::endl; // 16.9 Ouncesn Tea 
-\/
+
 std::ostringstream oss(&quot;Ito-En Green Tea&quot;, std::ostringstream::ate);
 oss &lt;&lt; &quot;16.9 Ounces&quot;;
 std::cout &lt;&lt; oss.str() &lt;&lt; std::endl; // Ito-En Green Tea16.9 Ounces
 </div><p id="k1n12_156"><span id="k1n12_159"><font style="color:#8a2be2">Positioning Functions:</font></span></p><ol class="list _decimal" id="k1n12_157" type="1"><li class="list__item" id="k1n12_160"><p id="k1n12_162"><span id="k1n12_165"><font style="color:#ff00ff">tellp()</font></span></p><p id="k1n12_163">Returns the current position of the put pointer in the output string stream.</p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;iostream&gt;">
 #include &lt;iostream&gt;
 #include &lt;sstream&gt;
-\/
+
 int main() {
     std::ostringstream oss;
     oss &lt;&lt; &quot;Hello&quot;;
-\/
+
     std::streampos currentPos = oss.tellp();
     std::cout &lt;&lt; &quot;Current put pointer position: &quot; &lt;&lt; currentPos &lt;&lt; std::endl; // Output: 5
-\/
+
     oss &lt;&lt; &quot; World!&quot;;
     currentPos = oss.tellp();
     std::cout &lt;&lt; &quot;New put pointer position: &quot; &lt;&lt; currentPos &lt;&lt; std::endl; // Output: 12
-\/
+
     return 0;
 }
     </div></li><li class="list__item" id="k1n12_161"><p id="k1n12_166"><span id="k1n12_170"><font style="color:#ff00ff">seekp(pos)</font></span></p><p id="k1n12_167">Moves the put pointer to a specific position within the output string stream.</p><p id="k1n12_168">The position can be an absolute offset from the beginning of the stream, or a relative offset from the current position (using std::ios::beg, std::ios::cur, or std::ios::end as a second argument).</p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;iostream&gt;">
 #include &lt;iostream&gt;
 #include &lt;sstream&gt;
-\/
+
 int main() {
     std::ostringstream oss;
     oss &lt;&lt; &quot;Hello World!&quot;;
-\/
+
     // 1. Absolute positioning (from the beginning)
     oss.seekp(0); // Move to the beginning
     oss &lt;&lt; &quot;Hi&quot;; // Overwrite &quot;Hello&quot;
-\/
+
     std::cout &lt;&lt; oss.str() &lt;&lt; std::endl; // Output: Hi World!
-\/
+
     // 2. Relative positioning (from the end)
     oss.seekp(-2, std::ios::end); // Move 2 positions back from the end
     oss &lt;&lt; &quot;???&quot;; // Overwrite &quot;d!&quot;
-\/
+
     std::cout &lt;&lt; oss.str() &lt;&lt; std::endl; // Output: Hi Worl???
-\/
+
     // 3. Using std::ios::beg (from the beginning)
     oss.seekp(5, std::ios::beg); // Move 5 positions from the beginning
     oss &lt;&lt; &quot;-&quot;; // Insert &quot;-&quot;
-\/
+
     std::cout &lt;&lt; oss.str() &lt;&lt; std::endl; // Output: Hi Worl-???
-\/
+
     // 4. Using std::ios::cur (from the current position)
     oss.seekp(2, std::ios::cur); // Move 2 positions forward from the current position
     oss &lt;&lt; &quot;+&quot;; // Insert &quot;+&quot;
-\/
+
     std::cout &lt;&lt; oss.str() &lt;&lt; std::endl; // Output: Hi Worl-?+??
-\/
+
     return 0;
 }
     </div></li></ol></section><section class="chapter"><h5 id="4-2-2-input-stringstreams" data-toc="4-2-2-input-stringstreams">4.2.2 Input Stringstreams</h5><aside class="prompt" data-type="warning" data-title="" id="k1n12_171"><p id="k1n12_177">Types matter! Stream stops reading at any whitespace or any invalid character for the type.</p></aside><p id="k1n12_172"><span id="k1n12_178"><font style="color:#8a2be2">Examples:</font></span></p><div class="code-block" data-lang="cpp">
@@ -141,7 +141,7 @@ std::istringstream iss(&quot;16.9 Ounces&quot;);
 double amount;
 std::string unit;
 iss &gt;&gt; amount &gt;&gt; unit; // amount = 16.9, unit = Ounces
-\/
+
 std::istringstream iss(&quot;16.9 Ounces&quot;);
 int amount;
 std::string unit;
@@ -149,84 +149,84 @@ iss &gt;&gt; amount &gt;&gt; unit; // amount = 16, unit = &quot;.9&quot;
 </div><p id="k1n12_174"><span id="k1n12_179"><font style="color:#8a2be2">Positioning Functions:</font></span></p><ol class="list _decimal" id="k1n12_175" type="1"><li class="list__item" id="k1n12_180"><p id="k1n12_182"><span id="k1n12_185"><font style="color:#ff00ff">tellg()</font></span></p><p id="k1n12_183">Returns the current position of the get pointer in the input string stream.</p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;iostream&gt;">
 #include &lt;iostream&gt;
 #include &lt;sstream&gt;
-\/
+
 int main() {
     std::istringstream iss(&quot;Hello World&quot;);
-\/
+
     iss &gt;&gt; std::ws; // Skip leading whitespaces
-\/
+
     std::cout &lt;&lt; &quot;Current position: &quot; &lt;&lt; iss.tellg() &lt;&lt; std::endl; // Output: 0
-\/
+
     std::string word;
     iss &gt;&gt; word; // Read &quot;Hello&quot;
-\/
+
     std::cout &lt;&lt; &quot;Current position after reading 'Hello': &quot; &lt;&lt; iss.tellg() &lt;&lt; std::endl; // Output: 5 (or 6 if there's a space after Hello)
-\/
+
     return 0;
 }
     </div></li><li class="list__item" id="k1n12_181"><p id="k1n12_186"><span id="k1n12_190"><font style="color:#ff00ff">seekg(pos)</font></span></p><p id="k1n12_187">Moves the put pointer to a specific position within the output string stream.</p><p id="k1n12_188">The position can be an absolute offset from the beginning of the stream, or a relative offset from the current position (using std::ios::beg, std::ios::cur, or std::ios::end as a second argument).</p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;iostream&gt;">
 #include &lt;iostream&gt;
 #include &lt;sstream&gt;
-\/
+
 int main() {
     std::istringstream iss(&quot;Hello World&quot;);
-\/
+
     // Using absolute position from the beginning
     iss.seekg(7); // Move to the 7th position from the beginning (equivalent to iss.seekg(7, std::ios::beg))
     char char1;
     iss.get(char1); 
     std::cout &lt;&lt; &quot;Character read after seeking to absolute position 7: &quot; &lt;&lt; char1 &lt;&lt; std::endl; // Output: o
-\/
+
     // Using ios::beg (beginning)
     iss.seekg(6, std::ios::beg); // Move to the 6th position from the beginning
     std::string word1;
     iss &gt;&gt; word1; 
     std::cout &lt;&lt; &quot;Word read after seeking from beginning: &quot; &lt;&lt; word1 &lt;&lt; std::endl; // Output: World
-\/
+
     // Using ios::cur (current)
     iss.seekg(2, std::ios::cur); // Move 2 positions forward from the current position (which is after &quot;World&quot;)
     char char2;
     iss.get(char2);
     std::cout &lt;&lt; &quot;Character read after seeking from current: &quot; &lt;&lt; char2 &lt;&lt; std::endl; // Output: d 
-\/
+
     // Using ios::end (end)
     iss.seekg(-5, std::ios::end); // Move 5 positions backward from the end
     std::string word2;
     iss &gt;&gt; word2;
     std::cout &lt;&lt; &quot;Word read after seeking from end: &quot; &lt;&lt; word2 &lt;&lt; std::endl; // Output: World
-\/
+
     return 0;
 }
     </div></li></ol><aside class="prompt" data-type="tip" data-title="" id="k1n12_176"><p id="k1n12_191">Two data types:</p><ol class="list _decimal" id="k1n12_192" type="1"><li class="list__item" id="k1n12_195"><p id="k1n12_197"><span id="k1n12_198"><font style="color:#ff00ff">streampos:</font></span> Represents the position of the get pointer.</p></li><li class="list__item" id="k1n12_196"><p id="k1n12_199"><span id="k1n12_200"><font style="color:#ff00ff">streamoff:</font></span> Represents the difference (offset) between two streampos values.</p></li></ol><p id="k1n12_193"><span id="k1n12_201"><font style="color:#8a2be2">Example:</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;iostream&gt;">
 #include &lt;iostream&gt;
 #include &lt;sstream&gt;
-\/
+
 int main() {
     // Create an output string stream
     std::ostringstream oss;
     oss &lt;&lt; &quot;Hello, world!&quot;;
-\/
+
     // Get the current position using streampos
     std::streampos pos = oss.tellp();
     std::cout &lt;&lt; &quot;Current position in output stream: &quot; &lt;&lt; pos &lt;&lt; std::endl; // Outputs: 13
-\/    
+    
     // Move the position using streamoff
     oss.seekp(5, std::ios::beg);
     pos = oss.tellp();
     std::cout &lt;&lt; &quot;New position in output stream after seekp: &quot; &lt;&lt; pos &lt;&lt; std::endl; // Outputs: 5
-\/    
+    
     // Create an input string stream with the data from the output stream
     std::istringstream iss(oss.str());
-\/    
+    
     // Get the current position using streampos
     pos = iss.tellg();
     std::cout &lt;&lt; &quot;Current position in input stream: &quot; &lt;&lt; pos &lt;&lt; std::endl; // Outputs: 0
-\/    
+    
     // Move the position using streamoff
     iss.seekg(7, std::ios::beg);
     pos = iss.tellg();
     std::cout &lt;&lt; &quot;New position in input stream after seekg: &quot; &lt;&lt; pos &lt;&lt; std::endl; // Outputs: 7
-\/    
+    
     return 0;
 }
 </div></aside></section><section class="chapter"><h5 id="4-2-3-getline" data-toc="4-2-3-getline">4.2.3 Getline</h5><div class="code-block" data-lang="cpp">
@@ -245,7 +245,7 @@ std::cout &lt;&lt; (iss.eof() ? &quot;EOF&quot; : &quot;Not EOF&quot;) &lt;&lt; 
 </div></section></section><section class="chapter"><h4 id="4-3-input-streams" data-toc="4-3-input-streams">4.3 Input Streams</h4><p id="k1n12_239"><span id="k1n12_246"><font style="color:#8a2be2">There are four standard iostreams</font></span></p><ul class="list _bullet" id="k1n12_240"><li class="list__item" id="k1n12_247"><p id="k1n12_251"><span id="k1n12_252"><font style="color:#ff00ff">cout:</font></span> Standard Output Stream .</p></li><li class="list__item" id="k1n12_248"><p id="k1n12_253"><span id="k1n12_254"><font style="color:#ff00ff">cin:</font></span> Standard Input Stream (buffered).</p></li><li class="list__item" id="k1n12_249"><p id="k1n12_255"><span id="k1n12_256"><font style="color:#ff00ff">cerr (Standard Error Stream):</font></span> used to output errors (unbuffered).</p></li><li class="list__item" id="k1n12_250"><p id="k1n12_257"><span id="k1n12_258"><font style="color:#ff00ff">clog (Standard Logging Stream):</font></span> used for non-critical event logging (buffered).</p></li></ul><p id="k1n12_241"><span id="k1n12_259"><font style="color:#8a2be2">cin</font></span></p><ul class="list _bullet" id="k1n12_242"><li class="list__item" id="k1n12_260"><p id="k1n12_263">The program hangs and waits for user input when the position reaches EOF, past the last token in the buffer.</p></li><li class="list__item" id="k1n12_261"><p id="k1n12_264">The position pointer skips whitespace <span id="k1n12_265"><font style="color:#ff4500">after</font></span> the token with each &gt;&gt; operation.</p></li><li class="list__item" id="k1n12_262"><p id="k1n12_266">The position pointer does the following:</p><ul class="list _bullet" id="k1n12_267"><li class="list__item" id="k1n12_268"><p id="k1n12_270">consume all whitespaces (spaces, newlines, '\t', '\n', etc .)</p></li><li class="list__item" id="k1n12_269"><p id="k1n12_271">reads as many characters until:</p><ul class="list _bullet" id="k1n12_272"><li class="list__item" id="k1n12_273"><p id="k1n12_276">a whitespace is reached, or...</p></li><li class="list__item" id="k1n12_274"><p id="k1n12_277">for primitives, the maximum number of bytes necessary to form a valid variable.</p></li><li class="list__item" id="k1n12_275"><p id="k1n12_278">Example: if we extract an int from &quot;86.2&quot;, we'll get 86, with pos at the decimal point.</p></li></ul></li></ul></li></ul><p id="k1n12_243"><span id="k1n12_279"><font style="color:#8a2be2">Examples:</font></span></p><div class="code-comparer" id="k1n12_244" data-comparing="horizontally"><div class="code-block" data-lang="cpp" data-title="Example 1">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
-\/
+
 int main() {
     double pi, r;
     std::string name;
@@ -261,7 +261,7 @@ int main() {
     </div><div class="code-block" data-lang="cpp" data-title="Example 2">
 #include &lt;iostream&gt;
 #include &lt;string&gt;
-\/
+
 int main() {
     double pi, r;
     std::string name;
@@ -276,22 +276,22 @@ int main() {
 }
     </div></div><aside class="prompt" data-type="warning" data-title="" id="k1n12_245"><p id="k1n12_282">Don&rsquo;t use getline() and std::cin() together, unless you really really have to!</p></aside></section><section class="chapter"><h4 id="4-4-output-streams" data-toc="4-4-output-streams">4.4 Output Streams</h4><p id="k1n12_283"><span id="k1n12_289"><font style="color:#8a2be2">cerr &amp; clog</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;iostream&gt;">
 #include &lt;iostream&gt;
-\/
+
 int main() {
     std::cerr &lt;&lt; &quot;Error: Could not open the file!&quot; &lt;&lt; std::endl;
-\/
+
     std::clog &lt;&lt; &quot;Log: User logged in successfully.&quot; &lt;&lt; std::endl;
-\/
+
     return 0;
 }
 </div><p id="k1n12_285"><span id="k1n12_290"><font style="color:#8a2be2">Input File Streams &amp; Output File Streams</font></span></p><div class="table-wrapper"><table class="left_header wide" id="k1n12_286"><thead><tr class="ijRowHead" id="k1n12_291"><th id="k1n12_297"></th><th id="k1n12_298"><p>ifstream</p></th><th id="k1n12_299"><p>ofstream</p></th></tr></thead><tbody><tr id="k1n12_292"><th id="k1n12_300"><p>Purpose</p></th><td id="k1n12_301"><p>Input from a file</p></td><td id="k1n12_302"><p>Output to a file</p></td></tr><tr id="k1n12_293"><th id="k1n12_303"><p>Mode</p></th><td id="k1n12_304"><p>Opens a file in read mode</p></td><td id="k1n12_305"><p>Opens a file in write mode</p></td></tr><tr id="k1n12_294"><th id="k1n12_306"><p>Default behavior</p></th><td id="k1n12_307"><p>If the file doesn't exist, it fails to open.</p></td><td id="k1n12_308"><p>If the file doesn't exist, it creates a new one. If it exists, it overwrites the content by default.</p></td></tr><tr id="k1n12_295"><th id="k1n12_309"><p>Operators</p></th><td id="k1n12_310"><p>Primarily used with the extraction operator (&gt;&gt;) to read data from the file.</p></td><td id="k1n12_311"><p>Primarily used with the insertion operator (&lt;&lt;) to write data to the file.</p></td></tr><tr id="k1n12_296"><th id="k1n12_312"><p>Similarities</p></th><td id="k1n12_313" colspan="2"><ol class="list _alpha-lower" id="k1n12_314" type="a"><li class="list__item" id="k1n12_315"><p id="k1n12_317">They share many common methods like open(), close(), is_open() , good(), bad(), fail(), eof(), etc. for managing the file stream .</p></li><li class="list__item" id="k1n12_316"><p id="k1n12_318">Both inherit properties and methods from the base class fstream .</p></li></ol></td></tr></tbody></table></div><p id="k1n12_287"><span id="k1n12_319"><font style="color:#8a2be2">Example:</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;iostream&gt;">
 #include &lt;iostream&gt;
 #include &lt;fstream&gt;
-\/
+
 int main() {
     // ifstream for reading from a file
     std::ifstream inputFile(&quot;myInput.txt&quot;);
-\/
+
     if (inputFile.is_open()) {
         std::string line;
         while (std::getline(inputFile, line)) {
@@ -301,30 +301,30 @@ int main() {
     } else {
     std::cerr &lt;&lt; &quot;Unable to open input file.&quot; &lt;&lt; std::endl;
     }
-\/
+
     // ofstream for writing to a file
     std::ofstream outputFile(&quot;myOutput.txt&quot;);
-\/
+
     if (outputFile.is_open()) {
         outputFile &lt;&lt; &quot;This is some text for the output file.&quot; &lt;&lt; std::endl;
         outputFile.close();
     } else {
         std::cerr &lt;&lt; &quot;Unable to open output file.&quot; &lt;&lt; std::endl;
     }
-\/
+
     return 0;
 }
 </div></section></section><section class="chapter"><h3 id="5-modern-c-types" data-toc="5-modern-c-types">5 Modern C++ Types</h3><section class="chapter"><h4 id="5-1-auto" data-toc="5-1-auto">5.1 Auto</h4><ul class="list _bullet" id="k1n12_324"><li class="list__item" id="k1n12_326"><p id="k1n12_328">When a type name is too long and a simpler alias makes the code more readable, use it.</p></li><li class="list__item" id="k1n12_327"><p id="k1n12_329">In libraries there is a common name for a type within each class. Example:</p><ul class="list _bullet" id="k1n12_330"><li class="list__item" id="k1n12_331"><p id="k1n12_333">vector::iterator, map::iterator, string::iterator</p></li><li class="list__item" id="k1n12_332"><p id="k1n12_334">vector::reference, map::reference, string::reference</p></li></ul></li></ul><aside class="prompt" data-type="warning" data-title="" id="k1n12_325"><p id="k1n12_335">Auto discards const and references!</p></aside></section><section class="chapter"><h4 id="5-2-pair-tuple" data-toc="5-2-pair-tuple">5.2 Pair/Tuple</h4><p id="k1n12_336">A pair is simply two objects bundled together.</p><aside class="prompt" data-type="note" data-title="" id="k1n12_337"><p id="k1n12_340">Remember to include &lt; utility &gt; and &lt; tuple &gt;</p></aside><p id="k1n12_338"><span id="k1n12_341"><font style="color:#8a2be2">Examples:</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="std::pair&lt;double, int&gt; price(3.4, 5);">
 std::pair&lt;double, int&gt; price(3.4, 5);
-\/
+
 // make_pair/tuple (C++ 11) automatically deduces the type!
 auto prices = std::make_pair(3.4, 5);
 auto values = std::make_tuple(3, 4, &quot;hi&quot;);
-\/
+
 // access via get/set
 prices.first = prices.second;           // prices = {5, 5}
 get&lt;0&gt;(values) = get&lt;1&gt;(values);  // values = {4, 4, &quot;hi&quot;}
-\/
+
 // structured binding (C++ 17) - extract each binding
 auto [a, b] = prices;       // a = 5, b = 5
 const auto&amp; [c, d, e] = values; // c = 4, d = 4, e = &quot;hi&quot;
@@ -337,11 +337,11 @@ int* v4 = const_cast&lt;int*&gt; (&amp;v3); // v4 = 3
 #include &lt;iostream&gt;
 #include &lt;vector&gt;
 #include &lt;initializer_list&gt;
-\/
+
 class MyContainer {
 private:
     std::vector&lt;int&gt; data;
-\/
+
 public:
     // Constructor using initializer_list
     MyContainer(std::initializer_list&lt;int&gt; values) {
@@ -350,7 +350,7 @@ public:
             data.push_back(value);
         }
     }
-\/
+
     void print() const {
         for (int value : data) {
             std::cout &lt;&lt; value &lt;&lt; &quot; &quot;;
@@ -358,15 +358,15 @@ public:
         std::cout &lt;&lt; std::endl;
     }
 };
-\/
+
 int main() {
     // Using initializer_list to initialize MyContainer
     MyContainer container1 = {1, 2, 3, 4, 5};
     container1.print();
-\/
+
     MyContainer container2{6, 7, 8};
     container2.print(); 
-\/
+
     return 0;
 }
 </div><aside class="prompt" data-type="warning" data-title="" id="k1n12_349"><p id="k1n12_353">C++ 11 provides a uniform initialization syntax. Using the uniform initialization syntax, the initializer list constructor is preferred over constructor.</p></aside><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="std::vector&lt;int&gt; v1(3, 10) // v1 = {10, 10, 10}">
@@ -439,7 +439,7 @@ auto isLessThanLimit = [limit](auto val) -&gt; bool {
 auto func1 = [=, &amp;teas](parameters) -&gt; return-value {   
     // body 
 };
-\/
+
 // capture all by reference, except banned is by value
 auto func2 = [&amp;, banned](parameters) -&gt; return-value {   
     // body
@@ -448,7 +448,7 @@ auto func2 = [&amp;, banned](parameters) -&gt; return-value {
 int add(int a, int b) { 
     return a + b; 
 }
-\/
+
 int main() {
     std::function&lt;int(int, int)&gt; func; // initially empty
     func = add; // Assign a regular function
@@ -461,7 +461,7 @@ int main() {
 int multiplyAndAdd(int a, int b, int c) {
     return (a * b) + c;
 }
-\/
+
 int main() {
     auto operation = std::bind(multiplyAndAdd, std::placeholders::_1,
     std::placeholders::_2, 4);
@@ -469,18 +469,18 @@ int main() {
 }
 </div><ul class="list _bullet" id="k1n12_559"><li class="list__item" id="k1n12_589"><p id="k1n12_592"><code class="code" id="k1n12_593">std::placeholders::_1</code> means &quot;take the first argument passed to operation&quot;.</p></li><li class="list__item" id="k1n12_590"><p id="k1n12_594"><code class="code" id="k1n12_595">std::placeholders::_2</code> means &quot;take the second argument passed to operation&quot;.</p></li><li class="list__item" id="k1n12_591"><p id="k1n12_596">4 is the third argument of <code class="code" id="k1n12_597">multiplyAndAdd</code>.</p></li></ul><aside class="prompt" data-type="warning" data-title="" id="k1n12_560"><p id="k1n12_598">Lambdas provide a convenient and expressive way to define objects that behave like functions. =&gt; Lambdas are a type of function object.</p></aside></section><section class="chapter"><h4 id="8-2-algorithms" data-toc="8-2-algorithms">8.2 Algorithms</h4><section class="chapter"><h5 id="8-2-1-std-sort" data-toc="8-2-1-std-sort">8.2.1 std::sort</h5><p id="k1n12_604"><span id="k1n12_612"><font style="color:#8a2be2">Syntax:</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;algorithm&gt; // Required header">
 #include &lt;algorithm&gt; // Required header
-\/
+
 // 1. Basic Usage (Sorting using &lt; operator)
 template &lt;class RandomAccessIterator&gt;
 void sort(RandomAccessIterator first, RandomAccessIterator last);
-\/
+
 // 2. Custom Comparison Function
 template &lt;class RandomAccessIterator, class Compare&gt;
 void sort(RandomAccessIterator first, RandomAccessIterator last, Compare comp);
 </div><p id="k1n12_606"><span id="k1n12_613"><font style="color:#8a2be2">Example:</font></span></p><div class="code-block" data-lang="cpp">
 std::vector&lt;int&gt; numbers = {3, 1, 4, 1, 5};
 std::sort(numbers.begin(), numbers.end()); // Sort the entire vector
-\/
+
 std::sort(numbers.begin(), numbers.end(), std::greater&lt;int&gt;()); // Sort in descending order
 </div><p id="k1n12_608"><span id="k1n12_614"><font style="color:#8a2be2">Parameters:</font></span></p><ol class="list _decimal" id="k1n12_609" type="1"><li class="list__item" id="k1n12_615"><p id="k1n12_618"><span id="k1n12_619"><font style="color:#ff00ff">first (iterator):</font></span> An iterator pointing to the beginning of the range you want to sort.</p></li><li class="list__item" id="k1n12_616"><p id="k1n12_620"><span id="k1n12_621"><font style="color:#ff00ff">last (iterator):</font></span> An iterator pointing to one position past the end of the range to be sorted.</p></li><li class="list__item" id="k1n12_617"><p id="k1n12_622"><span id="k1n12_623"><font style="color:#ff00ff">comp (comparison function) (optional):</font></span> A binary function (takes two arguments) that defines the sorting criterion. It should return true if the first argument should come before the second in the sorted order, and false otherwise.</p></li></ol><p id="k1n12_610"><span id="k1n12_624"><font style="color:#8a2be2">Important notes:</font></span></p><ul class="list _bullet" id="k1n12_611"><li class="list__item" id="k1n12_625"><p id="k1n12_628">You can sort a portion of the entire vector, array, etc.</p><div class="code-block" data-lang="cpp">
     std::vector&lt;int&gt; data = {5, 2, 8, 1, 9, 3};
@@ -490,7 +490,7 @@ struct Item {
     int id;
     std::string name;
 };
-\/
+
 // Stable Comparison
 bool compareByNameStable(const Item&amp; a, const Item&amp; b) {
     if (a.name == b.name) {
@@ -498,7 +498,7 @@ bool compareByNameStable(const Item&amp; a, const Item&amp; b) {
     }
     return a.name &lt; b.name;
 }
-\/
+
 int main() {
     std::vector&lt;Item&gt; items = {
         {1, &quot;Apple&quot;},
@@ -509,24 +509,24 @@ int main() {
 }
     </div></li><li class="list__item" id="k1n12_627"><p id="k1n12_632"><span id="k1n12_633"><font style="color:#ff00ff">Average case:</font></span> <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="11.15ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 4928.3 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mi" transform="translate(2206.7,0)"><path data-c="6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(278,0)"></path><path data-c="67" d="M329 409Q373 453 429 453Q459 453 472 434T485 396Q485 382 476 371T449 360Q416 360 412 390Q410 404 415 411Q415 412 416 414V415Q388 412 363 393Q355 388 355 386Q355 385 359 381T368 369T379 351T388 325T392 292Q392 230 343 187T222 143Q172 143 123 171Q112 153 112 133Q112 98 138 81Q147 75 155 75T227 73Q311 72 335 67Q396 58 431 26Q470 -13 470 -72Q470 -139 392 -175Q332 -206 250 -206Q167 -206 107 -175Q29 -140 29 -75Q29 -39 50 -15T92 18L103 24Q67 55 67 108Q67 155 96 193Q52 237 52 292Q52 355 102 398T223 442Q274 442 318 416L329 409ZM299 343Q294 371 273 387T221 404Q192 404 171 388T145 343Q142 326 142 292Q142 248 149 227T179 192Q196 182 222 182Q244 182 260 189T283 207T294 227T299 242Q302 258 302 292T299 343ZM403 -75Q403 -50 389 -34T348 -11T299 -2T245 0H218Q151 0 138 -6Q118 -15 107 -34T95 -74Q95 -84 101 -97T122 -127T170 -155T250 -167Q319 -167 361 -139T403 -75Z" transform="translate(778,0)"></path></g><g data-mml-node="mo" transform="translate(3484.7,0)"><path data-c="2061" d=""></path></g><g data-mml-node="mi" transform="translate(3651.3,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mo" transform="translate(4539.3,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p></li></ul></section><section class="chapter"><h5 id="8-2-2-std-nth-element" data-toc="8-2-2-std-nth-element">8.2.2 std::nth_element</h5><p id="k1n12_635"><span id="k1n12_643"><font style="color:#8a2be2">Syntax:</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;algorithm&gt;">
 #include &lt;algorithm&gt;
-\/
+
 template &lt;class RandomAccessIterator&gt;
 void nth_element (RandomAccessIterator first, RandomAccessIterator nth,
 RandomAccessIterator last);
-\/
+
 // Optional: You can provide a custom comparison function
 template &lt;class RandomAccessIterator, class Compare&gt;
 void nth_element (RandomAccessIterator first, RandomAccessIterator nth,
 RandomAccessIterator last, Compare comp);
 </div><p id="k1n12_637"><span id="k1n12_644"><font style="color:#8a2be2">Example:</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="std::vector&lt;int&gt; numbers = {5, 2, 8, 1, 9, 3};">
 std::vector&lt;int&gt; numbers = {5, 2, 8, 1, 9, 3};
-\/
+
 std::nth_element(numbers.begin(), numbers.begin() + 2, numbers.end());
 // Output: 2 1 3 8 9 5 (The element at index 2 is now '3',
 //          which is the 3rd smallest, but the rest are not sorted)
 </div><p id="k1n12_639"><span id="k1n12_645"><font style="color:#8a2be2">Parameters:</font></span></p><ol class="list _decimal" id="k1n12_640" type="1"><li class="list__item" id="k1n12_646"><p id="k1n12_650"><span id="k1n12_651"><font style="color:#ff00ff">first:</font></span> Iterator to the beginning of the range.</p></li><li class="list__item" id="k1n12_647"><p id="k1n12_652"><span id="k1n12_653"><font style="color:#ff00ff">nth:</font></span> Iterator pointing to the position you want the nth element to be placed in.</p></li><li class="list__item" id="k1n12_648"><p id="k1n12_654"><span id="k1n12_655"><font style="color:#ff00ff">last:</font></span> Iterator to one past the end of the range.</p></li><li class="list__item" id="k1n12_649"><p id="k1n12_656"><span id="k1n12_657"><font style="color:#ff00ff">comp (optional):</font></span> A binary comparison function, similar to std::sort.</p></li></ol><p id="k1n12_641"><span id="k1n12_658"><font style="color:#8a2be2">Important notes:</font></span></p><ul class="list _bullet" id="k1n12_642"><li class="list__item" id="k1n12_659"><p id="k1n12_662">With this, you can efficiently find the median of a dataset without fully sorting it, or determine the <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="2.878ex" height="1.956ex" role="img" focusable="false" viewBox="0 -853.7 1272.2 864.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D458" d="M121 647Q121 657 125 670T137 683Q138 683 209 688T282 694Q294 694 294 686Q294 679 244 477Q194 279 194 272Q213 282 223 291Q247 309 292 354T362 415Q402 442 438 442Q468 442 485 423T503 369Q503 344 496 327T477 302T456 291T438 288Q418 288 406 299T394 328Q394 353 410 369T442 390L458 393Q446 405 434 405H430Q398 402 367 380T294 316T228 255Q230 254 243 252T267 246T293 238T320 224T342 206T359 180T365 147Q365 130 360 106T354 66Q354 26 381 26Q429 26 459 145Q461 153 479 153H483Q499 153 499 144Q499 139 496 130Q455 -11 378 -11Q333 -11 305 15T277 90Q277 108 280 121T283 145Q283 167 269 183T234 206T200 217T182 220H180Q168 178 159 139T145 81T136 44T129 20T122 7T111 -2Q98 -11 83 -11Q66 -11 57 -1T48 16Q48 26 85 176T158 471L195 616Q196 629 188 632T149 637H144Q134 637 131 637T124 640T121 647Z"></path></g><g data-mml-node="TeXAtom" transform="translate(554,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mtext"><path data-c="74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z"></path><path data-c="68" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 124T102 167T103 217T103 272T103 329Q103 366 103 407T103 482T102 542T102 586T102 603Q99 622 88 628T43 637H25V660Q25 683 27 683L37 684Q47 685 66 686T103 688Q120 689 140 690T170 693T181 694H184V367Q244 442 328 442Q451 442 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(389,0)"></path></g></g></g></g></g></svg></mjx-container> smallest or largest element.</p></li><li class="list__item" id="k1n12_660"><p id="k1n12_664">It sorts so <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="3.057ex" height="1.956ex" role="img" focusable="false" viewBox="0 -853.7 1351.2 864.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="TeXAtom" transform="translate(633,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mtext"><path data-c="74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z"></path><path data-c="68" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 124T102 167T103 217T103 272T103 329Q103 366 103 407T103 482T102 542T102 586T102 603Q99 622 88 628T43 637H25V660Q25 683 27 683L37 684Q47 685 66 686T103 688Q120 689 140 690T170 693T181 694H184V367Q244 442 328 442Q451 442 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(389,0)"></path></g></g></g></g></g></svg></mjx-container> element is in correct position, and all elements smaller to left, larger to right, but the elements before the <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="3.057ex" height="1.956ex" role="img" focusable="false" viewBox="0 -853.7 1351.2 864.7"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msup"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="TeXAtom" transform="translate(633,363) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mtext"><path data-c="74" d="M27 422Q80 426 109 478T141 600V615H181V431H316V385H181V241Q182 116 182 100T189 68Q203 29 238 29Q282 29 292 100Q293 108 293 146V181H333V146V134Q333 57 291 17Q264 -10 221 -10Q187 -10 162 2T124 33T105 68T98 100Q97 107 97 248V385H18V422H27Z"></path><path data-c="68" d="M41 46H55Q94 46 102 60V68Q102 77 102 91T102 124T102 167T103 217T103 272T103 329Q103 366 103 407T103 482T102 542T102 586T102 603Q99 622 88 628T43 637H25V660Q25 683 27 683L37 684Q47 685 66 686T103 688Q120 689 140 690T170 693T181 694H184V367Q244 442 328 442Q451 442 463 329Q464 322 464 190V104Q464 66 466 59T477 49Q498 46 526 46H542V0H534L510 1Q487 2 460 2T422 3Q319 3 310 0H302V46H318Q379 46 379 62Q380 64 380 200Q379 335 378 343Q372 371 358 385T334 402T308 404Q263 404 229 370Q202 343 195 315T187 232V168V108Q187 78 188 68T191 55T200 49Q221 46 249 46H265V0H257L234 1Q210 2 183 2T145 3Q42 3 33 0H25V46H41Z" transform="translate(389,0)"></path></g></g></g></g></g></svg></mjx-container> element are not guaranteed to be sorted among themselves, and neither are the elements after it.</p></li><li class="list__item" id="k1n12_661"><p id="k1n12_667"><span id="k1n12_668"><font style="color:#ff00ff">Average case:</font></span> <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="5.495ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 2429 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g><g data-mml-node="mo" transform="translate(2040,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p></li></ul></section><section class="chapter"><h5 id="8-2-3-std-stable-partition" data-toc="8-2-3-std-stable-partition">8.2.3 std::stable_partition</h5><p id="k1n12_670"><span id="k1n12_676"><font style="color:#8a2be2">Syntax:</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;algorithm&gt; // Required header">
 #include &lt;algorithm&gt; // Required header
-\/
+
 template &lt;class BidirectionalIterator, class UnaryPredicate&gt;
 BidirectionalIterator stable_partition (BidirectionalIterator first,
 BidirectionalIterator last,
@@ -536,12 +536,12 @@ UnaryPredicate pred);
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
 #include &lt;string&gt;
-\/
+
 // A simple struct to represent a course (you can customize this)
 struct Course {
     std::string name;
 };
-\/
+
 int main() {
 // Sample course data
 std::vector&lt;Course&gt; courses = {
@@ -551,32 +551,32 @@ std::vector&lt;Course&gt; courses = {
     {&quot;PHYS101&quot;},
     {&quot;CS301&quot;}
 };
-\/
+
     std::string dep = &quot;CS&quot;;
-\/
+
     // Lambda function to check if a course belongs to the &quot;CS&quot; department
     auto isDep = [dep](const Course&amp; course) {
         return course.name.size() &gt;= dep.size() &amp;&amp; 
                course.name.substr(0, dep.size()) == dep;
     };
-\/
+
     // Partition the courses vector, keeping &quot;CS&quot; courses at the beginning
     auto iter = std::stable_partition(courses.begin(), courses.end(), isDep);
-\/
+
     // Remove non-&quot;CS&quot; courses
     courses.erase(iter, courses.end());
-\/
+
     // Output the remaining &quot;CS&quot; courses
     std::cout &lt;&lt; &quot;CS Courses:\n&quot;;
     for (const Course&amp; course : courses) {
         std::cout &lt;&lt; course.name &lt;&lt; std::endl;
     }
-\/
+
     return 0;
 }
 </div></section><section class="chapter"><h5 id="8-2-4-std-copy-if" data-toc="8-2-4-std-copy-if">8.2.4 std::copy_if</h5><p id="k1n12_700"><span id="k1n12_705"><font style="color:#8a2be2">Syntax:</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;algorithm&gt; // Required header">
 #include &lt;algorithm&gt; // Required header
-\/
+
 template &lt;class InputIterator, class OutputIterator, class UnaryPredicate&gt;
 OutputIterator copy_if (InputIterator first, InputIterator last,
 OutputIterator result, UnaryPredicate pred);
@@ -585,11 +585,11 @@ OutputIterator result, UnaryPredicate pred);
 #include &lt;vector&gt;
 #include &lt;algorithm&gt;
 #include &lt;string&gt;
-\/
+
 struct Course {
     std::string name;
 };
-\/
+
 int main() {
     std::vector&lt;Course&gt; csCourses = {
         {&quot;CS101&quot;},
@@ -598,30 +598,30 @@ int main() {
         {&quot;PHYS101&quot;},
         {&quot;CS301&quot;}
     };
-\/
+
     std::vector&lt;Course&gt; filteredCourses; 
     std::string dep = &quot;CS&quot;;
-\/
+
     auto isDep = [dep](const Course&amp; course) {
         return course.name.size() &gt;= dep.size() &amp;&amp; 
                course.name.substr(0, dep.size()) == dep;
     };
-\/
+
     // Copy matching courses to 'filteredCourses'
     // Use back_inserter to add more space!
     std::copy_if(csCourses.begin(), csCourses.end(), 
                  std::back_inserter(filteredCourses), isDep);
-\/
+
     std::cout &lt;&lt; &quot;Filtered CS Courses:\n&quot;;
     for (const Course&amp; course : filteredCourses) {
         std::cout &lt;&lt; course.name &lt;&lt; std::endl;
     }
-\/
+
     return 0;
 }
 </div></section><section class="chapter"><h5 id="8-2-5-std-remove-if" data-toc="8-2-5-std-remove-if">8.2.5 std::remove_if</h5><p id="k1n12_734"><span id="k1n12_737"><font style="color:#8a2be2">Syntax:</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;algorithm&gt; // Required header">
 #include &lt;algorithm&gt; // Required header
-\/
+
 template &lt;class ForwardIterator, class UnaryPredicate&gt;
 ForwardIterator remove_if (ForwardIterator first, ForwardIterator last,
 UnaryPredicate pred);
@@ -630,7 +630,7 @@ UnaryPredicate pred);
 // that its contents won't get declared twice.
 #ifndef MYCLASS_H
 #define MYCLASS_H
-\/
+
 class MyClass {
 public:
     MyClass(); // Constructor
@@ -640,23 +640,23 @@ public:
 private:
     int myVariable; // Member variable (data inside each object)
 };  // Semicolons!
-\/
+
 #endif // MYCLASS_H
 </div><p id="k1n12_775"><span id="k1n12_827"><font style="color:#8a2be2">Example (source file):</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &quot;MyClass.h&quot;">
 #include &quot;MyClass.h&quot;
-\/
+
 MyClass::MyClass() {
     myVariable = 0; // Initialize member variable
 }
-\/
+
 void MyClass::myMethod() {
     myVariable++;
 }
-\/
+
 MyClass::~MyClass() {
     // Simple destructor implementation
 }
-\/
+
 int MyClass::getMyVariable() {
     return myVariable;
 }
@@ -664,7 +664,7 @@ int MyClass::getMyVariable() {
 int plus(const int&amp; x) {
     return x + 1; // Error: x is const
 }
-\/
+
 int plus(const int x) {
 return x + 1; // OK: x is a copy
 }
@@ -673,15 +673,15 @@ struct Planet {
     int countPopulation() const; 
     void deathStar(); 
 };
-\/
+
 int Planet::countPopulation() const {
     return 42;
 }
-\/
+
 void Planet::deathStar() {
     std::cout &lt;&lt; &quot;BOOM&quot; &lt;&lt; std::endl;
 }
-\/
+
 void evil(const Planet &amp;p) {
     // OK: countPopulation is const
     std::cout &lt;&lt; p.countPopulation() &lt;&lt; std::endl;
@@ -693,11 +693,11 @@ void evil(const Planet &amp;p) {
 // (*p)++; OK! 
 // p++; NOT allowed!
 int * const p;
-\/
+
 // non-constant pointer to a constant
 int const int* p;
 int const* p;
-\/
+
 // constant pointer to a constant
 int const int* const p;
 int const* const p;
@@ -705,7 +705,7 @@ int const* const p;
 const vector&lt;int&gt;::iterator itr = v.begin(); 
 *itr = 5; // OK! changing what itr points to 
 ++itr; // ERROR! can’t modify itr
-\/
+
 vector&lt;int&gt;::const_iterator itr = v.begin();
 *itr = 5; //ERROR! can’t change value of itr
 ++itr; //OK! changing v
@@ -722,13 +722,13 @@ int value = *itr; //OK! reading from itr
 ostream&amp; operator&lt;&lt;(ostream&amp; s, const string&amp; val) { 
     ...
 }
-\/
+
 string&amp; vector&lt;string&gt;::operator[](size_t index) const { 
     ...
 }
 </div></section><section class="chapter"><h4 id="10-2-operator-overloading" data-toc="10-2-operator-overloading">10.2 Operator Overloading</h4><p id="k1n12_869"><span id="k1n12_878"><font style="color:#8a2be2">General rule of Thumb:</font></span> (Member &amp; Non-Member)</p><ol class="list _decimal" id="k1n12_870" type="1"><li class="list__item" id="k1n12_879"><p>Some operators must be implemented as members (e.g., [], (), -&gt;, =) due to C++ semantics.</p></li><li class="list__item" id="k1n12_880"><p>Some must be implemented as non-members (eg. &lt;&lt;, if you are writing class for rhs, not lhs).</p></li><li class="list__item" id="k1n12_881"><p>If unary operator (eg. ++), implement as member.</p></li><li class="list__item" id="k1n12_882"><p>If binary operator and treats both operands equally (eg. both unchanged) implement as non-member (maybe friend). Examples: +, &lt; .</p></li><li class="list__item" id="k1n12_883"><p>If binary operator and not both equally (changes lhs), implement as member (allows easy access to lhs private members). Examples: +=</p></li></ol><aside class="prompt" data-type="tip" data-title="" id="k1n12_871"><ol class="list _decimal" id="k1n12_884" type="1"><li class="list__item" id="k1n12_885"><p>Always think about const-ness of parameters.</p></li><li class="list__item" id="k1n12_886"><p>Return reference to support chaining &lt;&lt; calls.</p></li><li class="list__item" id="k1n12_887"><p>Here we are overloading &lt;&lt; so our class works as the rhs... but we can't change the class of lhs (stream library).</p></li></ol></aside><p id="k1n12_872"><span id="k1n12_888"><font style="color:#8a2be2">Examples:</font></span></p><p id="k1n12_873"><span id="k1n12_889"><font style="color:#ff00ff">Member Function:</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;iostream&gt;">
 #include &lt;iostream&gt;
-\/
+
 class MyClass {
 private:
     int data[10];
@@ -737,12 +737,12 @@ public:
     int&amp; operator[](int index) {
         return data[index];
     }
-\/
+
     // Function call operator ()
     int operator()(int a, int b) {
         return data[a] + data[b]; 
     }
-\/
+
     // Assignment operator (=)
     MyClass&amp; operator=(const MyClass&amp; other) {
         if (this != &amp;other) { // Avoid self-assignment
@@ -753,37 +753,37 @@ public:
         return *this;
     } 
 };
-\/
+
 int main() {
     MyClass obj;
     obj[2] = 5; // Using the subscript operator
     obj[3] = 10; // Using the subscript operator
     int sum = obj(2, 3); // Using the function call operator
     std::cout &lt;&lt; &quot;Sum: &quot; &lt;&lt; sum &lt;&lt; std::endl;
-\/
+
     MyClass obj2;
     obj2 = obj; // Using the assignment operator
     return 0;
 }
 </div><p id="k1n12_875"><span id="k1n12_890"><font style="color:#ff00ff">Non-Member Function:</font></span></p><div class="code-collapse" data-lang="cpp" data-is-expanded="false" data-synopsis="#include &lt;iostream&gt;">
 #include &lt;iostream&gt;
-\/
+
 class Point {
 private:
     int x, y;
 public:
     Point(int xVal, int yVal) : x(xVal), y(yVal) {}
-\/
+
     // Friend declaration for the output stream operator
     friend std::ostream&amp; operator&lt;&lt;(std::ostream&amp; out, const Point&amp; p);
 };
-\/
+
 // Non-member output stream operator (&lt;&lt;)
 std::ostream&amp; operator&lt;&lt;(std::ostream&amp; out, const Point&amp; p) {
     out &lt;&lt; &quot;(&quot; &lt;&lt; p.x &lt;&lt; &quot;, &quot; &lt;&lt; p.y &lt;&lt; &quot;)&quot;;
     return out;
 }
-\/
+
 int main() {
     Point p(5, 10);
     std::cout &lt;&lt; &quot;Point coordinates: &quot; &lt;&lt; p &lt;&lt; std::endl; // Using the overloaded &lt;&lt;
@@ -1111,4 +1111,4 @@ public class Main {
         myCat.eat();      // Output: Cat is eating
     }
 }
-</div></section></section></section><section class="chapter"><h2 id="modern-c" data-toc="modern-c">Ⅳ Modern C++</h2><section class="chapter"><h3 id="14-raii" data-toc="14-raii">14 RAII</h3></section></section><div class="last-modified">Last modified: 22 九月 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="get-started.html" class="navigation-links__prev">Get Started</a><a href="computer-architecture.html" class="navigation-links__next">Computer Architecture</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b419/app.js"></script></body></html>
+</div></section></section></section><section class="chapter"><h2 id="modern-c" data-toc="modern-c">Ⅳ Modern C++</h2><section class="chapter"><h3 id="14-raii" data-toc="14-raii">14 RAII</h3></section></section><div class="last-modified">Last modified: 22 September 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="get-started.html" class="navigation-links__prev">Get Started</a><a href="computer-architecture.html" class="navigation-links__next">Computer Architecture</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b419/app.js"></script></body></html>

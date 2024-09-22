@@ -19,7 +19,7 @@ class MyClass:
         self.value = value
     def __repr__(self):
         return f&quot;MyClass({self.value})&quot;
-\/
+
 obj = MyClass(10)
 print(repr(obj))  # Output: MyClass(10)
 </div></li><li class="list__item" id="-ad07yb_29"><p id="-ad07yb_35"><span id="-ad07yb_38"><font style="color:#ff00ff">repr:</font></span> Provides a human- readable string representation of the object. It's designed to be easily understood by humans.</p><p id="-ad07yb_36"><span id="-ad07yb_39"><font style="color:#8a2be2">Examples:</font></span></p><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="class MyClass:">
@@ -28,17 +28,17 @@ class MyClass:
         self.value = value
     def __str__(self):
         return f&quot;MyClass with value: {self.value}&quot;
-\/
+
 obj = MyClass(10)
 print(str(obj))  # Output: MyClass with value: 10
 </div></li></ol></section><section class="chapter"><h4 id="1-1-2-strings-in-python" data-toc="1-1-2-strings-in-python">1.1.2 Strings in Python</h4><p id="-ad07yb_40">For more information on strings, please visit <a href="data-structures-and-algorithms-3.html#strings-in-java" id="-ad07yb_46" data-tooltip="Strings in Java">strings in Java</a>.</p><p id="-ad07yb_41"><span id="-ad07yb_47"><font style="color:#8a2be2">Examples in Python:</font></span></p><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="name = &quot;Nate&quot;">
 name = &quot;Nate&quot;
 age = 19
-\/
+
 s = &quot;My name is %s and I am %d years old&quot; % (name, age)
 s1 = &quot;My name is {} and I am {} years old&quot;.format(name, age)
 s2 = f&quot;My name is {name} and I am {age} years old&quot;
-\/
+
 print(f&quot;2 + 2 = {(lambda x: x + x)(2)}&quot;) # 2 + 2 = 4
 </div><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="s = &quot;I have a dream!&quot;">
 s = &quot;I have a dream!&quot;
@@ -60,7 +60,7 @@ s1 = s.strip() # &quot;I have a dream!&quot; strip() can remove whitespace, \n, 
 s2 = &quot;I have a dream!&quot;
 s3 = s2.replace(&quot;dream&quot;, &quot;car&quot;) # &quot;I have a car!&quot;
 s4 = s2.split(&quot; &quot;) # [&quot;I&quot;, &quot;have&quot;, &quot;a&quot;, &quot;dream!&quot;]
-\/
+
 s5 = &quot;I have a dream!&quot;
 ret = s5.find(&quot;dream&quot;) # 9
 ret = s5.find(&quot;car&quot;) # -1
@@ -68,7 +68,7 @@ ret = s5.index(&quot;dream&quot;) # 9
 ret = s5.index(&quot;car&quot;) # ValueError
 print(&quot;I&quot; in s5) # True
 print(s5.startswith(&quot;I&quot;)) # True
-\/
+
 s6 = &quot;123&quot;
 ret = s6.isdigit() # True
 </div></section></section><section class="chapter"><h3 id="1-2-lists" data-toc="1-2-lists">1.2 Lists</h3><p id="-ad07yb_48"><span id="-ad07yb_52"><font style="color:#8a2be2">Examples:</font></span></p><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="lst = [&quot;I&quot;, &quot;have&quot;, &quot;a&quot;, &quot;dream!&quot;]">
@@ -81,7 +81,7 @@ lst = []
 lst.append(&quot;I&quot;) # [&quot;I&quot;]
 lst.insert(0, &quot;have&quot;) # [&quot;have&quot;, &quot;I&quot;]
 lst.extend([&quot;a&quot;, &quot;dream!&quot;]) # [&quot;have&quot;, &quot;I&quot;, &quot;a&quot;, &quot;dream!&quot;]
-\/
+
 lst.pop() # &quot;dream!&quot;
 lst.pop(0) # &quot;have&quot;
 lst.remove(&quot;I&quot;) # [&quot;a&quot;]
@@ -90,7 +90,7 @@ lst.[0] = &quot;me&quot; # [&quot;me&quot;]
 lst = [1, 2, 4, 3, 5]
 lst.sort() # [1, 2, 3, 4, 5]
 lst.sort(reverse=True) # [5, 4, 3, 2, 1]
-\/
+
 lst = [&quot;I&quot;, &quot;have&quot;, &quot;a&quot;, &quot;dream!&quot;]
 lst[1] = lst[1].upper() # string operations must return a new string
 print(lst) # [&quot;I&quot;, &quot;HAVE&quot;, &quot;a&quot;, &quot;dream!&quot;]
@@ -98,12 +98,12 @@ print(lst) # [&quot;I&quot;, &quot;HAVE&quot;, &quot;a&quot;, &quot;dream!&quot;
 t = ()
 t = (1, 2, 3)
 t[1] = 4 # TypeError -&gt; Tuple is unchangeable!
-\/
+
 t = (&quot;I have a dream!&quot;)
 print(type(t)) # &lt;class 'str'&gt;
 t = (&quot;I have a dream!&quot;,)
 print(type(t)) # &lt;class 'tuple'&gt;
-\/
+
 t = (&quot;I&quot;, &quot;have&quot;, [&quot;a&quot;, &quot;dream&quot;])
 t[2].append(&quot;!&quot;)
 print(t) # (&quot;I&quot;, &quot;have&quot;, [&quot;a&quot;, &quot;dream&quot;, &quot;!&quot;])
@@ -120,7 +120,7 @@ s = set()
 s.add(1)
 s.add(2)
 s.add(3)
-\/
+
 s.pop()
 s.remove(2)
 </div><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="s1 = {1, 2, 3}">
@@ -128,10 +128,10 @@ s1 = {1, 2, 3}
 s2 = {3, 4, 5}
 print(s1 &amp; s2) # {3}
 print(s1.intersection(s2)) # {3}
-\/
+
 print(s1 | s2) # {1, 2, 3, 4, 5}
 print(s1.union(s2)) # {1, 2, 3, 4, 5}
-\/
+
 print(s1 - s2) # {1, 2}
 print(s1.difference(s2)) # {1, 2}
 </div></section><section class="chapter"><h3 id="dictionaries" data-toc="dictionaries">1.5 Dictionary</h3><aside class="prompt" data-type="note" data-title="" id="-ad07yb_68"><p id="-ad07yb_75">Some important notes:</p><ul class="list _bullet" id="-ad07yb_76"><li class="list__item" id="-ad07yb_77"><p id="-ad07yb_79">A key of a dictionary cannot be a list or a dictionary (or any mutable type).</p></li><li class="list__item" id="-ad07yb_78"><p id="-ad07yb_80">Two keys cannnot be equal.</p></li></ul></aside><div class="code-block" data-lang="python">
@@ -148,20 +148,20 @@ otherwise, add and set the key-value pair to default in dictionary.
 </div><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="dict = {1: &quot;I&quot;, 2: &quot;have&quot;, 3: &quot;a&quot;, 4: &quot;dream!&quot;}">
 dict = {1: &quot;I&quot;, 2: &quot;have&quot;, 3: &quot;a&quot;, 4: &quot;dream!&quot;}
 dict.pop(4) # {1: &quot;I&quot;, 2: &quot;have&quot;, 3: &quot;a&quot;}
-\/
+
 print(dict[0]) # KeyError
 print(dict.get(0)) # None
 </div><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="dict = {1: &quot;I&quot;, 2: &quot;have&quot;, 3: &quot;a&quot;, 4: &quot;dream!&quot;}">
 dict = {1: &quot;I&quot;, 2: &quot;have&quot;, 3: &quot;a&quot;, 4: &quot;dream!&quot;}
 for key in dict:
     print(key, dict[key])
-\/
+
 print(list(dict.keys())) # [1, 2, 3, 4]
 print(list(dict.values())) # [&quot;I&quot;, &quot;have&quot;, &quot;a&quot;, &quot;dream!&quot;]
-\/
+
 for item in dict.items():
     print(item)
-\/
+
 for key, value in dict.items():
     print(key, value)
 </div><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="dict = {1: &quot;I&quot;, 2: &quot;have&quot;, 3: &quot;a&quot;, 4: &quot;dream!&quot;}">
@@ -178,23 +178,23 @@ def summation(n, term):
     while k &lt;= n:
         total, k = total + term(k), k + 1
     return total
-\/
-\/
+
+
 def cube(k):
     return k * k * k
-\/
-\/
+
+
 def sum_cubes(n):
     return summation(n, cube)
 </div><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="def apply_twice(f, x):">
 def apply_twice(f, x):
     return f(f(x))
-\/
-\/
+
+
 def square(x):
     return x * x
-\/
-\/
+
+
 result = apply_twice(square, 2)
 </div><section class="procedure-steps"><h3 id="-ad07yb_135" data-toc="-ad07yb_135">Apply a User-Defined Function</h3><ol class="list _decimal"><li class="list__item" id="-ad07yb_139"><p id="-ad07yb_142">Create a new frame.</p></li><li class="list__item" id="-ad07yb_140"><p id="-ad07yb_143">Bind formal parameters (f &amp; x) to arguments.</p></li><li class="list__item" id="-ad07yb_141"><p id="-ad07yb_144">Execute the body: return f(f(x)).</p></li></ol></section><aside class="prompt" data-type="note" data-title="" id="-ad07yb_136"><p id="-ad07yb_145">This is the environment frame for the code above.</p></aside><figure id="-ad07yb_137"><img alt="Environments for Higher
 -Order Functions" src="Computer-Science-Study-Notes/p2-1-1.png" title="Environments for Higher
@@ -213,7 +213,7 @@ auto lambda = [](int x, int y) {
     int product = x * y;
     return sum + product;
 };
-\/
+
 int result = lambda(5, 7);  // result will be 47
     </div></div><div class="tabs__content" data-gtm="tab" id="-ad07yb_171" data-title="Java"><div class="code-collapse" data-lang="java" data-title="Java" data-is-expanded="false" data-synopsis="public static void main(String[] args) {">
 public static void main(String[] args) {
@@ -222,7 +222,7 @@ public static void main(String[] args) {
         int product = x * y;
         return sum + product;
     };
-\/
+
     int result = addAndMultiply.applyAsInt(5, 7);  // result will be 47
     System.out.println(result);
 }    
@@ -232,29 +232,29 @@ let myFunction = (x, y) =&gt; {
     let product = x * y;
     return sum + product;
 };
-\/
+
 let result = myFunction(5, 7);  // result will be 47
     </div></div></div><aside class="prompt" data-type="tip" data-title="" id="-ad07yb_161"><ol class="list _decimal" id="-ad07yb_177" type="1"><li class="list__item" id="-ad07yb_178"><p id="-ad07yb_180">C++, Java and JavaScript all support multiple lines of code in the lambda expression.</p></li><li class="list__item" id="-ad07yb_179"><p id="-ad07yb_181">For more information on lambda functions in C++, please visit <a href="c-programming.html#Lambda" id="-ad07yb_182" data-tooltip="Lambda Functions in C++">C++ Programming</a>.</p></li></ol></aside></section><section class="chapter"><h3 id="2-4-currying" data-toc="2-4-currying">2.4 Currying</h3><p id="-ad07yb_183"><span id="-ad07yb_185"><font style="color:#8a2be2">Examples:</font></span></p><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="def curry2(f):">
 def curry2(f):
     def g(x):
         def h(y):
             return f(x, y)
-\/
+
         return h
-\/
+
     return g
-\/
-\/
+
+
 def add(x, y):
     return x + y
-\/
-\/
+
+
 s = curry2(add)(1)(2)
 </div></section></section><section class="chapter"><h2 id="3-recursion" data-toc="3-recursion">3 Recursion</h2><p id="-ad07yb_186"><span id="-ad07yb_191"><font style="color:#ff8c00">Recursive Function:</font></span> A function is called <span id="-ad07yb_192"><i>recursive</i></span> if the body of that function calls itself, either directly or indirectly.</p><section class="chapter"><h3 id="3-1-self-reference-return-by-its-own-name" data-toc="3-1-self-reference-return-by-its-own-name">3.1 Self-Reference: Return by its own name</h3><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="def print_all(x):">
 def print_all(x):
     print(x)
     return print_all
-\/  
+  
 print_all(1)(3)(5)
 </div><figure id="-ad07yb_194"><img alt="Environment Diagram" src="Computer-Science-Study-Notes/p3-1-1.png" title="Environment Diagram" width="553" height="784"></figure><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="def print_sums(x):">
 def print_sums(x):
@@ -262,12 +262,12 @@ def print_sums(x):
     def next_sum(y):
         return print_sums(x + y)
     return next_sum
-\/
+
 print_sums(1)(3)(5)
 </div><figure id="-ad07yb_196"><img alt="Environment Diagram" src="Computer-Science-Study-Notes/p3-1-2.png" title="Environment Diagram" width="521" height="840"></figure></section><section class="chapter"><h3 id="3-2-recursion-environment-diagrams" data-toc="3-2-recursion-environment-diagrams">3.2 Recursion &amp; Environment Diagrams</h3><p id="-ad07yb_197"><span id="-ad07yb_203"><font style="color:#8a2be2">Example 1:</font></span></p><div class="code-collapse" data-lang="python" data-is-expanded="false" data-synopsis="def split(n):">
 def split(n):
     return n // 10, n % 10
-\/
+
 def sum_digits(n):
     # Base Cases
     if n &lt; 10:
@@ -496,4 +496,4 @@ Scheme">
 (define b 2)
 (list a b) ; (1 2)
 (list 'a 'b) ; (a b)
-</div><p id="-ad07yb_498"><span id="-ad07yb_513"><font style="color:#8a2be2">Built-In List Processing Procedures</font></span></p><ul class="list _bullet" id="-ad07yb_499"><li class="list__item" id="-ad07yb_514"><p id="-ad07yb_518"><span id="-ad07yb_519"><font style="color:#ff00ff">(append s t):</font></span> list the elements of s and t; append can be called on more than 2 lists.</p></li><li class="list__item" id="-ad07yb_515"><p id="-ad07yb_520"><span id="-ad07yb_521"><font style="color:#ff00ff">(map f s):</font></span> call a procedure f on each element of a list s and list the results.</p></li><li class="list__item" id="-ad07yb_516"><p id="-ad07yb_522"><span id="-ad07yb_523"><font style="color:#ff00ff">(filter f s):</font></span> call a procedure f on each element of a list s and list the elements for which a true value is the result.</p></li><li class="list__item" id="-ad07yb_517"><p id="-ad07yb_524"><span id="-ad07yb_525"><font style="color:#ff00ff">(apply f s):</font></span> call a procedure f with the elements of a list as its arguments.</p></li></ul></section></section><div class="last-modified">Last modified: 22 九月 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="database-system.html" class="navigation-links__prev">Database System</a><a href="operating-system.html" class="navigation-links__next">Operating System</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b419/app.js"></script></body></html>
+</div><p id="-ad07yb_498"><span id="-ad07yb_513"><font style="color:#8a2be2">Built-In List Processing Procedures</font></span></p><ul class="list _bullet" id="-ad07yb_499"><li class="list__item" id="-ad07yb_514"><p id="-ad07yb_518"><span id="-ad07yb_519"><font style="color:#ff00ff">(append s t):</font></span> list the elements of s and t; append can be called on more than 2 lists.</p></li><li class="list__item" id="-ad07yb_515"><p id="-ad07yb_520"><span id="-ad07yb_521"><font style="color:#ff00ff">(map f s):</font></span> call a procedure f on each element of a list s and list the results.</p></li><li class="list__item" id="-ad07yb_516"><p id="-ad07yb_522"><span id="-ad07yb_523"><font style="color:#ff00ff">(filter f s):</font></span> call a procedure f on each element of a list s and list the elements for which a true value is the result.</p></li><li class="list__item" id="-ad07yb_517"><p id="-ad07yb_524"><span id="-ad07yb_525"><font style="color:#ff00ff">(apply f s):</font></span> call a procedure f with the elements of a list as its arguments.</p></li></ul></section></section><div class="last-modified">Last modified: 22 September 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="database-system.html" class="navigation-links__prev">Database System</a><a href="operating-system.html" class="navigation-links__next">Operating System</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b419/app.js"></script></body></html>
