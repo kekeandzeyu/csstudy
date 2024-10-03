@@ -6,7 +6,7 @@
 
 中文版请移步[这里](README_zh_CN.md)
 
-Visit [here](https://csstudy.pages.dev/) for the notes.
+Visit [here](https://csstudy.pages.dev/) for the notes, and don't visit GitHub Pages:)
 
 ## 1 Intention & Background
 
@@ -20,11 +20,11 @@ I took down notes carefully when studying. With the the content of my notes gett
 
 1. The author of the notes is not an EECS student, and some errors and mistakes cannot be avoided. Sorry for any inconvenience it might cause.
 
-2. Some of the pictures in the notes come from Wikipedia. Out of consideration of copyright, I didn't modify the pictures. However, some of them do not have background, which cannot be seen clearly in the dark theme. Therefore, it is highly recommended that you turned into light mode by clicking the button on the left side of the search bar.
+2. Some of the pictures in the notes come from Wikipedia. Out of consideration of copyright, I didn't modify the pictures. However, some of them do not have background, which cannot be seen clearly in the dark theme. The notes are in the dark theme by default; it is highly recommended that you turned into light mode by clicking the button on the left side of the search bar.
 
-3. The notes will be released in the form of pdf article, including Chinese editon. You will see it in the release part.
+3. The notes will be released in the form of pdf article, including Chinese edition. You will see it in the release part.
 
-4. Thank you for your reading! Everyone is welcome to discuss with me via email.
+4. Thank you for reading! Everyone is welcome to discuss with me via email.
 
 ## 3 References
 
@@ -56,9 +56,15 @@ If someone's original work is used but not mentioned, or being misused, either w
 
 4. CS61A: Structure and Interpretation of Computer Programs (UC Berkeley) by Professor John DeNero and the rest of CS61A staff.
 
-5. <https://en.wikipedia.org/wiki/Namespace>.
+5. <https://en.wikipedia.org/wiki/Standard_Template_Library>.
 
-6. <https://en.cppreference.com/w/>.
+6. <https://learn.microsoft.com/en-us/cpp/standard-library/cpp-standard-library-overview?view=msvc-170>.
+
+7. <https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library>.
+
+8. <https://en.wikipedia.org/wiki/Namespace>.
+
+9. <https://en.cppreference.com/w/>.
 
 > Note: Content of CS61A and CS61B are partly used for the Object-Oriented part.
 

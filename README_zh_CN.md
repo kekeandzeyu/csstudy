@@ -6,7 +6,7 @@
 
 For English version please check [here](README.md)
 
-点击[这里](https://csstudy.pages.dev/)阅读笔记。
+点击[这里](https://csstudy.pages.dev/)阅读笔记, 不要点击Github Pages哦
 
 ## 1 目的及背景
 
@@ -22,7 +22,7 @@ For English version please check [here](README.md)
 
 2. 本文中部分的图片来自维基百科，出于版权考虑并未对其进行修改，但是其中部分图片没有背景，在夜间模式下阅读效果可能不佳。笔记默认为夜间模式，建议您点击搜索栏左侧的按钮切换至日间模式。
 
-3. 本笔记在最终结束后会发布pdf文档，包含中文版，您将在release部分看到。
+3. 本笔记在最终结束后会发布pdf文档，包括中文版，您将在release部分看到。
 
 4. 感谢您的阅读！欢迎各位朋友通过邮箱与我交流。
 
@@ -30,7 +30,7 @@ For English version please check [here](README.md)
 
 以下列表是我在完成这份笔记时所参考的内容。如果有作者的原创作品被使用却未被声明，或者被错误使用，请通过邮件与我联系删除，谢谢。
 
-### Topic 1: 数据结构与算法第&#8544;， &#8545; & &#8546;部分
+### Topic 1: 数据结构与算法第&#8544;, &#8545 & &#8546;部分
 
 1. Algorithms &#8544; & &#8545; (Coursera) by Professor Robert Sedgewick & Kevin Wayne.
 
@@ -56,9 +56,15 @@ For English version please check [here](README.md)
 
 4. CS61A: Structure and Interpretation of Computer Programs (UC Berkeley) by Professor John DeNero and the rest of CS61A staff.
 
-5. <https://en.wikipedia.org/wiki/Namespace>.
+5. <https://en.wikipedia.org/wiki/Standard_Template_Library>.
 
-6. <https://en.cppreference.com/w/>.
+6. <https://learn.microsoft.com/en-us/cpp/standard-library/cpp-standard-library-overview?view=msvc-170>.
+
+7. <https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library>.
+
+8. <https://en.wikipedia.org/wiki/Namespace>.
+
+9. <https://en.cppreference.com/w/>.
 
 > 注意：CS61A和CS61B部分内容被用于面向对象编程部分。
 
