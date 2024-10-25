@@ -100,6 +100,10 @@ If someone's original work is used but not mentioned, or being misused, either w
 
 1. CS186: Introduction to Database Systems (UC Berkeley) by Professor Alvin Cheung, Joe Hellerstein and the rest of CS186 staff.
 
+### Topic 7: Rust Programming
+
+1. CS110L: Safety in Systems Programming (Stanford University) by Ryan Eberhardt, Julio Ballista, Thea Rossman and the rest of CS110L staff.
+
 ## 4 How to use it
 
 For the colors in the notes, here are their meanings:
