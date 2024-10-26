@@ -115,13 +115,25 @@ For the colors in the notes, here are their meanings:
 * LawnGreen: to indicate mathematical proof.
 * IndianRed: to indicate examples.
 
-## 5 License
+## 5 Contribute to This Project
+
+All kinds of contributions, including opening issues & pulling request, are welcome! The notes are meant to help more people!
+
+You can help refine this documentation by:
+
+1. Open an issue
+2. Pull request
+3. Use email to contact me and point out the mistakes: kekeandzeyu@gmail.com
+
+These notes are taken and published using [Writerside](https://www.jetbrains.com/writerside/). If you are not familiar with this tool, you can also open an issue or contact me via email.
+
+## 6 License
 
 The notes are under MIT License.
 
 All the references in the notes are under the original licenses.
 
-## 6 Acknowledgements
+## 7 Acknowledgements
 
 Above all, I'd like to express my sincere gratitude to all those professors and TAs in the list above, who selflessly imparting his profound knowledge to us beginners, and made those learning resources public to everyone. The valuable knowledge has benefited me a lot and will be unforgettable for my whole life.
 
