@@ -114,90 +114,15 @@ If someone's original work is used but not mentioned in the following list, or b
 
 1. CS110L: Safety in Systems Programming (Stanford University) by Ryan Eberhardt, Julio Ballista, Thea Rossman and the rest of CS110L staff.
 
-### Topic 1: Data Structures and Algorithms
-
-1. Algorithms &#8544; & &#8545; (Coursera) by Professor Robert Sedgewick & Kevin Wayne.
-
-2. CS61B: Data Structures and Algorithms (UC Berkeley) by Professor Josh Hug and the rest of CS61B staff.
-
-3. MIT 6.006: Introduction to Algorithms (MIT) by Professor Erik Demaine,  Justin Solomonm, Dr. Jason Ku (Spring 2020).
-
-4. <https://en.wikipedia.org/wiki/Tree_traversal>.
-
-5. By The original uploader was Jasampler at Spanish Wikipedia. - Transferred from es.wikipedia to Commons., Public Domain, <https://commons.wikimedia.org/w/index.php?curid=1755344>.
-
-6. <https://en.wikipedia.org/wiki/Catalan_number>.
-
-### Topic 2: C++ Programming
-
-1. CS106L: Standard C++ Programming (Stanford University) by Professor Avery Wang, Anna Zeng and the rest of CS106L staff.
-
-2. CS61B: Data Structures and Algorithms (UC Berkeley) by Professor Josh Hug and the rest of CS61B staff.
-
-3. CS106B: Programming Abstractions (Stanford University) by Professor Marty Stepp and the rest of CS106B staff.
-
-4. CS61A: Structure and Interpretation of Computer Programs (UC Berkeley) by Professor John DeNero and the rest of CS61A staff.
-
-5. <https://en.wikipedia.org/wiki/Standard_Template_Library>.
-
-6. <https://learn.microsoft.com/en-us/cpp/standard-library/cpp-standard-library-overview?view=msvc-170>.
-
-7. <https://en.wikipedia.org/wiki/C%2B%2B_Standard_Library>.
-
-8. <https://en.wikipedia.org/wiki/Namespace>.
-
-9. <https://en.cppreference.com/w/>.
-
-> Note: Content of CS61A and CS61B are partly used for the Object-Oriented part.
-
-### Topic 3: Python Programming
-
-1. CS61A: Structure and Interpretation of Computer Programs (UC Berkeley) by Professor John DeNero and the rest of CS61A staff.
-
-2. <https://en.wikipedia.org/wiki/Iterator>.
-
-### Topic 4: Computer Architecture
-
-1. CS61C: Great Ideas in Computer Architecture (UC Berkeley) by Professor Dan Garcia, Lecturer Stephan Kaminsky, Sean Farhat, Jenny Song, Peyrin Kao, and the rest of CS61C staff.
-
-2. CMU 15-213: Introduction to Computer Systems (Carnegie Mellon University) by Professor Randal E. Briant, David R. O'Hallaron, Brian Railing, Phillip Gibbons, David Varodayan, Mohamed Farag, and the rest of CMU 15-213 staff.
-
-3. Computer Systems: A Programmer's Perspective (3rd Edition) by Randal E. Bryant & David R. O'Hallaron.
-
-4. <https://en.wikipedia.org/wiki/Byte>.
-
-5. <https://en.cppreference.com/w/cpp/language/sizeof>.
-
-6. <https://en.wikipedia.org/wiki/Sizeof>.
-
-7. By Aeroid - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=137790829.
-
-8. <https://en.wikipedia.org/wiki/Segmentation_fault>.
-
-9. <https://en.wikipedia.org/wiki/Bus_error>.
-
-10. <https://en.wikipedia.org/wiki/Floating-point_arithmetic>.
-
-### Topic 5: Operating System
-
-1. CS162: Operating System (UC Berkeley) by Professor John Kubiatowicz and the rest of CS162 staff.
-
-### Topic 6: Database System
-
-1. CS186: Introduction to Database Systems (UC Berkeley) by Professor Alvin Cheung, Joe Hellerstein and the rest of CS186 staff.
-
-### Topic 7: Rust Programming
-
-1. CS110L: Safety in Systems Programming (Stanford University) by Ryan Eberhardt, Julio Ballista, Thea Rossman and the rest of CS110L staff.
-
 ## 4 How to use it
 
 For the colors in the notes, here are their meanings:
 
-* BlueViolet: to indicate different sections.
+* BlueViolet: to indicate different sections of a chapter.
 * OrangeRed: to highlight important parts.
 * DarkOrange: to indicate definitions.
 * Fuchsia: to indicate different points in a list.
+* MediumSeaGreen: to indicate subpoints under one point in a list.
 * LawnGreen: to indicate mathematical proof.
 * IndianRed: to indicate examples.
 
